@@ -3,4 +3,4 @@ cd excalibur_hmp
 git remote remove origin
 git remote add origin https://github.com/mrcloudd69/Barong.git
 git branch -M master
-git push -u origin master
+git push https://$GITHUB_TOKEN@github.com/mrcloudd69/Barong.git master
