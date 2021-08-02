@@ -1,4 +1,4 @@
-git clone https://source.codeaurora.org/quic/la/kernel/msm-4.19 -b kernel.lnx.4.19.r3-rel
+git clone https://source.codeaurora.org/quic/la/kernel/msm-4.19 -b kernel.lnx.4.19.r3
 cd msm-4.19
 git branch -M baka-4.19
 git remote set-url origin https://github.com/Baka-Project/Baka-Msm-4.19.git
