@@ -1,6 +1,4 @@
-git clone https://github.com/Baka-Project/Baka-Msm-4.14.git
-cd Baka-Msm-4.14
-git remote add test https://github.com/MiCode/Xiaomi_Kernel_OpenSource
-git fetch test vayu-r-oss
-git cherry-pick -m1 0c9888aa2373958ae38787ed84b803701f73f0a1
-git push https://$GITHUB_TOKEN@github.com/Baka-Project/Baka-Msm-4.14.git baka-4.14
+git clone https://source.codeaurora.org/quic/la/platform/build -b LA.QSSI.11.0.r1-13300-qssi.0
+cd build
+git checkout -b eleven
+git push https://$GITHUB_TOKEN@github.com/Weeaboo-Os/weaboo-build-make.git eleven
