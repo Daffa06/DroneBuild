@@ -1,9 +1,3 @@
-git clone https://source.codeaurora.org/quic/la/platform/frameworks/base -b LA.QSSI.11.0.r1-13300-qssi.0
-cd base
-git checkout -b eleven
-git push https://$GITHUB_TOKEN@github.com/Weeaboo-Os/weeaboo-frameworks-base.git eleven
-cd ../..
-
 git clone https://source.codeaurora.org/quic/la/platform/frameworks/native -b LA.QSSI.11.0.r1-13300-qssi.0
 cd native
 git checkout -b eleven
