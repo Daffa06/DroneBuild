@@ -9,5 +9,6 @@ cp -r labodj $HOME/Baka-Kernel-Patches
 cp -r showp1984 $HOME/Baka-Kernel-Patches
 cd ../..
 cd Baka-Kernel-Patches
+git add . && git commut -m "initial" --signoff
 git checkout -b baka
 git push https://$GITHUB_TOKEN@github.com/Baka-Project/Baka-Kernel-Patches.git baka
