@@ -12,7 +12,7 @@ steps:
         from_secret: BOT_API_KEY
       GITHUB_TOKEN:
         from_secret: GH_TOKEN
-    image: fadlyas/kernel_dockerfile:latest
+    image: vcyzteen/bakaburn:latest
     name: Latte
     trigger: 
       branch: 
