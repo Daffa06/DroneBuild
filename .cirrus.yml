@@ -1,9 +1,0 @@
-task:
-  timeout_in: 120m
-  container:
-    image: vcyzteen/bakaburn:latest
-    cpu: 8.0
-    memory: 32G
-
-  membakar:  
-    - ./run.sh
