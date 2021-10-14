@@ -1,8 +1,10 @@
 pipe:
   resources:
+  timeout_in: 120m
+  container:
+    image: vcyzteen/bakaburn:latest
     cpu: 8.0
     memory: 32G
-  name: Microwave
-  steps:
-    - image: vcyzteen/bakaburn:latest
-      build_script: ./run.sh
+    
+  membakar:
+    - ./run.sh
