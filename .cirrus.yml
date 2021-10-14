@@ -1,0 +1,8 @@
+pipe:
+  resources:
+    cpu: 8.0
+    memory: 32G
+  name: Microwave
+  steps:
+    - image: vcyzteen/bakaburn:latest
+      build_script: ./run.sh
