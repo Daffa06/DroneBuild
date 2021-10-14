@@ -5,6 +5,7 @@ pipe:
     image: vcyzteen/bakaburn:latest
     cpu: 8.0
     memory: 32G
-    
+
+ step:   
   membakar:
     - ./run.sh
