@@ -8,4 +8,4 @@ git status
 git add .
 git commit -m "NekoCL: initial import" --signoff 
 git branch -M neko
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/NekoCL.git neko
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git neko
