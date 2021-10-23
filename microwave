@@ -4,5 +4,4 @@ git clone https://github.com/vcyzteen/nekoCL.git
 cd nekoCL
 git fetch https://github.com/ClangBuiltLinux/tc-build
 git merge FETCH_HEAD
-git branch -M v
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/nekoCL.git v
