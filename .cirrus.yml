@@ -8,8 +8,8 @@ task:
     platform: linux
     cpu: 8.0
     memory: 32G
-  setup_git:
+  setup_git_script:
     - git config --global user.email "vcyzscape@gmail.com"
     - git config --global user.name "vcyzteen"
-  start_heating:
+  start_heating_script:
     - bash microwave
