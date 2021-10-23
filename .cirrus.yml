@@ -5,7 +5,8 @@ task:
   name: Microwave
   container:
     image: vcyzteen/bakaburn:latest
+    platform: linux
     cpu: 8.0
     memory: 32G
-  starting:
+  setup_script:
     - bash microwave
