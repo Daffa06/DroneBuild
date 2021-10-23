@@ -4,7 +4,7 @@ environment:
 task:
   name: Linux
   container:
-    image: debian:latest
+    image: vcyzteen/bakaburn:latest
     platform: linux
     cpu: 8.0
     memory: 32G
