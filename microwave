@@ -1,7 +1,7 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/kdrag0n/proton-clang-build.git pr
-cd pr
+git clone https://github.com/vcyzteen/nekoCL.git
+cd nekoCL
 git fetch https://github.com/ClangBuiltLinux/tc-build
 git merge FETCH_HEAD
 git branch -M v
