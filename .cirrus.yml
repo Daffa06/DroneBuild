@@ -9,4 +9,4 @@ task:
     cpu: 8.0
     memory: 32G
   setup_script:
-    - bash run.sh
+    - bash microwave
