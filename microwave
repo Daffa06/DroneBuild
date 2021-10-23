@@ -1,4 +1,14 @@
 #!/bin/bash
+
+# environment
+DIR="microwave"
+
 # make dir specific
-mkdir microwave && cd microwave
+if [ ! -d "$DIR" ]; then
+    mkdir -p "$DIR"
+else
+    cd "$DIR"
+fi
+
 # your code goes here
+
