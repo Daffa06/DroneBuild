@@ -3,6 +3,7 @@ environment:
 
 task:
   name: Microwave
+  timeout_in: 120m
   container:
     image: vcyzteen/bakaburn:latest
     platform: linux
