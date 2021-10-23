@@ -2,11 +2,10 @@ environment:
   GITHUB_TOKEN: ENCRYPTED[706dbe0caf40102254d645bf9b4351d2e822b0aa567dce1b47d066c2b5b573c804c754a2a689ea8ee926f6610e42e393]
 
 task:
-  name: Linux
+  name: Microwave
   container:
     image: vcyzteen/bakaburn:latest
-    platform: linux
     cpu: 8.0
     memory: 32G
-  setup_script:
+  starting:
     - bash microwave
