@@ -7,7 +7,7 @@ task:
   container:
     image: vcyzteen/bakaburn:latest
     platform: linux
-    cpu: 8.0
+    cpu: 16.0
     memory: 32G
   setup_git_script:
     - git config --global user.email "vcyzscape@gmail.com"
