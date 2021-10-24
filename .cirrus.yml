@@ -2,7 +2,7 @@ environment:
   GITHUB_TOKEN: ENCRYPTED[706dbe0caf40102254d645bf9b4351d2e822b0aa567dce1b47d066c2b5b573c804c754a2a689ea8ee926f6610e42e393]
 
 task:
-  timeout_in: 120m
+  timeout_in: 160m
   name: Microwave
   container:
     image: vcyzteen/bakaburn:latest
