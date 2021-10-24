@@ -1,11 +1,10 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/Panchajanya1999/tc-build
-cd tc-build
-git fetch https://github.com/ClangBuiltLinux/tc-build
-git merge FETCH_HEAD
-git status
+git clone https://github.com/vcyzteen/Neko-CL.git
+cd Neko-CL
+mkdir .github
+echo > .github/action.yaml
 git add .
-git commit -m "NekoCL: initial import" --signoff 
+git commit -m "NekoCL: initial import github action" --signoff 
 git branch -M neko
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git neko
