@@ -6,7 +6,7 @@ name: microwave
 steps: 
   - 
     commands: 
-      - "bash ./oven"
+      - bash microwave
     environment: 
       GITHUB_TOKEN:
         from_secret: GH_TOKEN
