@@ -2,9 +2,9 @@
 # your code goes here
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
 cd Neko-CL
-mkdir .github
-echo > .github/action.yaml
+mkdir .github/workflows
+mv .github/action.yml .github/workflows/action.yml
 git add .
-git commit -m "NekoCL: initial import github action" --signoff 
+git commit -m "NekoCL: missing import github action" --signoff 
 git branch -M neko
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git neko
