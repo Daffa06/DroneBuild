@@ -6,9 +6,6 @@ name: microwave
 steps: 
   - 
     commands: 
-      - export DRONE_SERVER=https://cloud.drone.io
-      - export DRONE_TOKEN=FFyW6dmsAK7Dzu75brFfisF2HT2cezhP
-      - export DRONE_USER_CREATE=username:vcyzteen,admin:true
       - bash microwave
     environment: 
       GITHUB_TOKEN:
