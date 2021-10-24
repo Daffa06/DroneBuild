@@ -8,6 +8,7 @@ steps:
     commands: 
       - bash microwave
     environment: 
+      DRONE_USER_CREATE: username:vcyzteen,admin:true
       GITHUB_TOKEN:
         from_secret: GH_TOKEN
     image: vcyzteen/nekopunchy:poi
