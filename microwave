@@ -1,6 +1,6 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/vcyzteen/Neko-CL.git
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
 cd Neko-CL
 mkdir .github
 echo > .github/action.yaml
