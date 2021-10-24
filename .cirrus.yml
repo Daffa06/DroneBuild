@@ -5,7 +5,7 @@ task:
   timeout_in: 160m
   name: Microwave
   container:
-    image: vcyzteen/bakaburn:latest
+    image: vcyzteen/nekopunchy:poi
     platform: linux
     cpu: 8.0
     memory: 32G
