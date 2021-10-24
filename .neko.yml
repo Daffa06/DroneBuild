@@ -1,0 +1,17 @@
+--- 
+clone: 
+  depth: 1
+kind: pipeline
+name: microwave
+steps: 
+  - 
+    commands: 
+      - "bash ./oven"
+    environment: 
+      GITHUB_TOKEN:
+        from_secret: GH_TOKEN
+    image: vcyzteen/nekopunchy:poi
+    name: burning
+    trigger: 
+      branch: 
+        - unified-tes
