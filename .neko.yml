@@ -5,6 +5,8 @@ kind: pipeline
 name: microwave
 steps: 
   - 
+    commands:
+      - sudo timedatectl set-timezone Asia/Jakarta
     commands: 
       - bash microwave
     environment: 
