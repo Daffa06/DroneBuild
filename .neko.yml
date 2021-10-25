@@ -6,7 +6,6 @@ name: microwave
 steps: 
   - 
     commands: 
-      - sudo timedatectl set-timezone Asia/Jakarta
       - bash microwave
     environment: 
       GITHUB_TOKEN:
