@@ -5,12 +5,10 @@ kind: pipeline
 name: microwave
 steps: 
   - 
-    commands:
-      - sudo timedatectl set-timezone Asia/Jakarta
     commands: 
+      - sudo timedatectl set-timezone Asia/Jakarta
       - bash microwave
     environment: 
-      DRONE_USER_CREATE: username:vcyzteen,admin:true
       GITHUB_TOKEN:
         from_secret: GH_TOKEN
     image: vcyzteen/nekopunchy:poi
