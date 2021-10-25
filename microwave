@@ -1,3 +1,5 @@
 #!/bin/bash
 # your code goes here
-neofetch
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
+cd Neko-CL
+bash build-tc*
