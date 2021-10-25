@@ -3,4 +3,3 @@
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
 cd Neko-CL
 bash build-tc*
-neofetch
