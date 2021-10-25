@@ -1,5 +1,8 @@
 #!/bin/bash
 # your code goes here
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
+git clone https://github.com/ClangBuiltLinux/tc-build
+mv tc-build/*py Neko-CL/
+mv tc-build/kernel Neko-CL/
 cd Neko-CL
-bash build-tc*
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
