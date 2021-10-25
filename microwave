@@ -1,10 +1,6 @@
 #!/bin/bash
 # your code goes here
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
-git clone https://github.com/ClangBuiltLinux/tc-build
-mv tc-build/*py Neko-CL/
-mv tc-build/kernel Neko-CL/
-cd Neko-CL
-
-git add . && git commit -m "STAGE1"
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
+cd gcc-build
+git reset --hard 3b0d814820733491df6bdb52b76509a6632bd67f
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git -f
