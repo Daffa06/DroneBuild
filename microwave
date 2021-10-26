@@ -1,5 +1,8 @@
 #!/bin/bash
 # your code goes here
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
-cd Neko-CL
-bash ci.sh
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/dotclean.git
+git clone https://github.com/vcyzteen/dotbaka.git
+mv dotbaka/.fonts dotclean/
+cd dotclean
+git add . && git commit -m "CLEAN: UPLOADING FONT" --signoff
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/dotclean.git dotclean
