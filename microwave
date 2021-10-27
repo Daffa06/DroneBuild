@@ -5,3 +5,4 @@ cd Neko-CL
 bash ci.sh llvm
 bash ci.sh binutils
 bash ci.sh kernel
+bash ci.sh push
