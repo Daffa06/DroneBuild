@@ -1,8 +1,14 @@
 #!/bin/bash
 # your code goes here
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
-cd Neko-CL
-bash ci.sh llvm
-bash ci.sh binutils
-bash ci.sh kernel
-bash ci.sh push
+git clone https://github.com/xanmod/linux.git
+cd linux
+make -j$(nproc) O=out ARCH=x86 CONFIGS/xanmod/clang/config
+make -j$(nproc) ARCH=x86 O=out \
+                CC=clang \
+                CXX=clang++ \
+                LD=ld.lld \
+                AR=llvm-ar \
+                NM=llvm-nm \
+		OBJCOPY=llvm-objcopy \
+		OBJDUMP=llvm-objdump \
+		STRIP=llvm-strip 
