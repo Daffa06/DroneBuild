@@ -2,7 +2,6 @@
 # your code goes here
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
 cd Neko-CL
-bash ci.sh deps
 bash ci.sh llvm
 bash ci.sh binutils
 bash ci.sh kernel
