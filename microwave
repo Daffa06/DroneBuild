@@ -1,11 +1,11 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/xanmod/linux.git
+git clone https://github.com/xanmod/linux.git -b 5.14
 cd linux
-make -j$(nproc) O=out ARCH=x86 CONFIGS/xanmod/clang/config
-make -j$(nproc) ARCH=x86 O=out \
+mv CONFIGS/xanmod/clang/config .config
+make -j$(nproc) O=out ARCH=arm64 .config
+make -j$(nproc) ARCH=arm64 O=out \
                 CC=clang \
-                CXX=clang++ \
                 LD=ld.lld \
                 AR=llvm-ar \
                 NM=llvm-nm \
