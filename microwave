@@ -3,7 +3,7 @@
 git clone https://github.com/xanmod/linux.git -b 5.14
 cd linux
 mv CONFIGS/xanmod/clang/config .config
-make -j$(nproc) O=out ARCH=arm64 .config
+make -j$(nproc) O=out ARCH=arm64 .config \
 make -j$(nproc) ARCH=arm64 O=out \
                 CC=clang \
                 LD=ld.lld \
