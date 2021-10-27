@@ -1,7 +1,8 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/ClangBuiltLinux/tc-build.git
-mv tc-build/ Neko-CL/
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
 cd Neko-CL
-git add . && git commit -m "NEW" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
+bash ci.sh deps
+bash ci.sh llvm
+bash ci.sh binutils
+bash ci.sh kernel
