@@ -1,9 +1,5 @@
 #!/bin/bash
 # your code goes here
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
-git clone https://github.com/ClangBuiltLinux/tc-build.git
-mv tc-build/*py Neko-CL/
-mv tc-build/*sh Neko-CL/
 cd Neko-CL
-git add . && git commit -m "Remerged New" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/Neko-CL.git
+bash build-tc*
