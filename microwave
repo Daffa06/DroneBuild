@@ -1,14 +1,12 @@
 #!/bin/bash
 # your code goes here
+cd $HOME
 git clone https://github.com/xanmod/linux.git -b 5.14
+git clone https://github.com/Baka-Project/BakaGCC.git -b gcc-arm-nonelf arm
+git clone https://github.com/Baka-Project/BakaGCC.git -b gcc-arm64-nonelf arm64
 cd linux
 mv CONFIGS/xanmod/clang/config .config
 make -j$(nproc) O=out ARCH=arm64 .config \
 make -j$(nproc) ARCH=arm64 O=out \
-                CC=clang \
-                LD=ld.lld \
-                AR=llvm-ar \
-                NM=llvm-nm \
-		OBJCOPY=llvm-objcopy \
-		OBJDUMP=llvm-objdump \
-		STRIP=llvm-strip 
+                CROSS_COMPILE=$HOME/arm64/bin/aarch64-linux-gnu- \
+                CROSS_COMPILE_ARM32=$HOME/arm/bin/arm-linux-androideabi-
