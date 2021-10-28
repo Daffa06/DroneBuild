@@ -9,4 +9,4 @@ mv CONFIGS/xanmod/gcc/config .config
 make -j$(nproc) O=out ARCH=arm64 .config \
 make -j$(nproc) ARCH=arm64 O=out \
                 CROSS_COMPILE=$HOME/arm64/bin/aarch64-linux-gnu- \
-                CROSS_COMPILE_ARM32=$HOME/arm/bin/arm-linux-androideabi-
+                CROSS_COMPILE_ARM32=$HOME/arm/bin/arm-linux-gnueabi-
