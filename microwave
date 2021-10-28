@@ -5,7 +5,7 @@ git clone https://github.com/xanmod/linux.git -b 5.14
 git clone https://github.com/Baka-Project/BakaGCC.git -b gcc-arm-nonelf arm
 git clone https://github.com/Baka-Project/BakaGCC.git -b gcc-arm64-nonelf arm64
 cd linux
-mv CONFIGS/xanmod/clang/config .config
+mv CONFIGS/xanmod/gcc/config .config
 make -j$(nproc) O=out ARCH=arm64 .config \
 make -j$(nproc) ARCH=arm64 O=out \
                 CROSS_COMPILE=$HOME/arm64/bin/aarch64-linux-gnu- \
