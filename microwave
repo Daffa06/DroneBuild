@@ -1,11 +1,4 @@
 #!/bin/bash
 # your code goes here
-cd $HOME
-git clone https://github.com/Baka-Project/Baka-Msm-4.4
-git clone https://github.com/Baka-Project/BakaGCC.git -b gcc-arm-nonelf arm
-git clone https://github.com/Baka-Project/BakaGCC.git -b gcc-arm64-nonelf arm64
-cd Baka-Msm-4.4
-make -j$(nproc) O=out ARCH=arm64 sdm660-perf_defconfig \
-make -j$(nproc) ARCH=arm64 O=out \
-                CROSS_COMPILE=$HOME/arm64/bin/aarch64-linux-gnu- \
-                CROSS_COMPILE_ARM32=$HOME/arm/bin/arm-linux-gnueabi-
+wget https://raw.githubusercontent.com/Baka-Project/Baka-Compile/baka/baka-compile
+printf 'y\ny\ny\n' | ./baka-compile --gcc
