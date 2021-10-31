@@ -1,4 +1,6 @@
 #!/bin/bash
 # your code goes here
-wget https://raw.githubusercontent.com/Baka-Project/Baka-Compile/baka/baka-compile
-printf 'y\ny\ny\n' | ./baka-compile --gcc
+git clone https://source.codeaurora.org/quic/la/kernel/msm-4.4 -b kernel.lnx.4.4.r42-rel
+cd msm-4.4
+git branch -M 4.4
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4
