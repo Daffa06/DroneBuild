@@ -2,5 +2,5 @@
 # your code goes here
 git clone https://github.com/vcyzteen/linux.git
 cd linux
-curl https://raw.githubusercontent.com/Baka-Project/Baka-Merged/baka/baka-merged | sh
+curl https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged | sh
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4
