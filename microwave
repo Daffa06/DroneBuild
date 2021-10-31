@@ -1,6 +1,6 @@
 #!/bin/bash
 # your code goes here
-git clone https://source.codeaurora.org/quic/la/kernel/msm-4.4 -b kernel.lnx.4.4.r42-rel
-cd msm-4.4
-git branch -M 4.4
+git clone https://github.com/vcyzteen/linux.git
+cd linux
+curl https://raw.githubusercontent.com/Baka-Project/Baka-Merged/baka/baka-merged | sh
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4
