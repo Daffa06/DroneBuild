@@ -2,9 +2,7 @@
 # your code goes here
 git clone https://github.com/vcyzteen/linux.git
 cd linux
-# git fetch https://github.com/LineageOS/android_kernel_asus_sdm660 lineage-18.1
-# git cherry-pick 287df0c4d9f48c534a477d4d808b3e1e4db767bb 287df0c4d9f48c534a477d4d808b3e1e4db767bb df773d73e364a107c49f60720fb8f14aaa2c9ea4 21e3480c8a976d96616527527eb609e0005b53ba b1c9c3f890d294dbe9a01257f7456cdae059306a aa77e00f0e6ae7e4d3e1a813a326800e8d7f5bcf
-# git add . && git commit -m "gcc-wraper" --signoff && git cherry-pick --continue
-# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
-bash kernel.sh
+git reset --hard b73711fdaddbf315d0cd988804779878284610cf
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git -f
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
+# bash kernel.sh
