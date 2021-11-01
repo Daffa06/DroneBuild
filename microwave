@@ -1,8 +1,7 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/vcyzteen/linux.git
+git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 cd linux
-git reset --hard b73711fdaddbf315d0cd988804779878284610cf
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git -f
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
-# bash kernel.sh
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
+bash kernel.sh
