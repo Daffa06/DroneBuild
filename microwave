@@ -6,7 +6,7 @@
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
 # bash kernel.sh
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git
+cd result-linux-kernel
 rm -rf *zip
 git add . && git commit -m "REMOVE FILE" --signoff
-git rm --cached result-linux-kernel
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git 4.4
