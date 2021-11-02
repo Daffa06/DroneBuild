@@ -10,7 +10,7 @@ cd gcc-build
 chmod +x build-gcc.sh
 ./build-gcc.sh -a arm
 cd ../gcc-arm
-git init
-git add . && git commit -m "Fix Gcc" --signoff
-git branch -M master
+# git init
+git add . && git commit -m "Upload Bin Gcc" --signoff
+# git branch -M master
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm-4.9.git master
