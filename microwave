@@ -1,8 +1,11 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
-cd linux
+# git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+# cd linux
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
-bash kernel.sh
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
+# bash kernel.sh
 
+git clone https://github.com/USBhost/build-tools-gcc
+cd build-tools-gcc
+./build -a arm64 -s linaro -v 8 -V 
