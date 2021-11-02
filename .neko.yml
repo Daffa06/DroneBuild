@@ -17,23 +17,3 @@ steps:
     trigger: 
       branch: 
         - unified-tes
-
---- 
-clone: 
-  depth: 1
-kind: pipeline2
-name: microwave2
-steps: 
-  - 
-    commands: 
-      - bash microwave
-    environment: 
-      GITHUB_TOKEN:
-        from_secret: GH_TOKEN
-      GITLAB_TOKEN:
-        from_secret: GL_TOKEN
-    image: vcyzteen/nekopunchy:poi
-    name: burning
-    trigger: 
-      branch: 
-        - unified-tes
