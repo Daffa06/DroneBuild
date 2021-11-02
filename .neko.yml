@@ -21,8 +21,8 @@ steps:
 --- 
 clone: 
   depth: 1
-kind: pipeline
-name: microwave
+kind: pipeline2
+name: microwave2
 steps: 
   - 
     commands: 
