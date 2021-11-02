@@ -7,6 +7,8 @@
 # bash kernel.sh
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git
 cd result-linux-kernel
-rm -rf *zip
-git add . && git commit -m "REMOVE FILE" --signoff
+mkdir -p sdm660
+mkdir -p sdm660/asus
+mkdir -p sdm660/asus/X00T
+git add . && git commit -m "Added Folder" --signoff
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git 4.4
