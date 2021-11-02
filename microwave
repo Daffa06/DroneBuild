@@ -8,4 +8,4 @@
 
 git clone https://github.com/USBhost/build-tools-gcc
 cd build-tools-gcc
-./build -a arm64 -s linaro -v 8 -V 
+bash build -a arm64 -s linaro -v 8 -V 
