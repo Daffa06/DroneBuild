@@ -1,16 +1,16 @@
 #!/bin/bash
 # your code goes here
-# git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
-# cd linux
+git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+cd linux
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
-# bash kernel.sh
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
-cd gcc-build
-chmod +x build-gcc.sh
-./build-gcc.sh -a arm
-cd ../gcc-arm
-git init
-git add . && git commit -m "Initial Import" --signoff
-git branch -M master
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm-4.9.git master
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
+bash kernel.sh
+# git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
+# cd gcc-build
+# chmod +x build-gcc.sh
+# ./build-gcc.sh -a arm
+# cd ../gcc-arm
+# git init
+# git add . && git commit -m "Initial Import" --signoff
+# git branch -M master
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm-4.9.git master
