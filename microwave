@@ -8,9 +8,9 @@
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
 cd gcc-build
 chmod +x build-gcc.sh
-./build-gcc.sh -a arm64
-cd ../gcc-arm64
+./build-gcc.sh -a arm
+cd ../gcc-arm
 git init
 git add . && git commit -m "Initial Import" --signoff
 git branch -M master
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git master
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm-4.9.git master
