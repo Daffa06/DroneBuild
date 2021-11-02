@@ -1,15 +1,8 @@
 #!/bin/bash
 # your code goes here
-# git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
-# cd linux
+git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+cd linux
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
-# bash kernel.sh
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git
-cd result-linux-kernel
-mkdir -p sdm660
-mkdir -p sdm660/asus
-mkdir -p sdm660/asus/X00T
-echo #### <p align="center">`Asus Max Pro M1 [ X00T/D ]`</p> > sdm660/asus/X00T/readme.md
-git add . && git commit -m "Added Folder" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git 4.4
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
+bash kernel.sh
+
