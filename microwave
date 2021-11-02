@@ -13,4 +13,4 @@ cd ../gcc-arm64
 git init
 git add . && git commit -m "Initial Import" --signoff
 git branch -M master
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git master
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git master
