@@ -10,5 +10,6 @@ cd result-linux-kernel
 mkdir -p sdm660
 mkdir -p sdm660/asus
 mkdir -p sdm660/asus/X00T
-git add . sdm660 -f && git commit -m "Added Folder" --signoff
+echo sdm660/asus/X00T/readme.md > #### <p align="center">`Asus Max Pro M1 [ X00T/D ]`</p>
+git add . && git commit -m "Added Folder" --signoff
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git 4.4
