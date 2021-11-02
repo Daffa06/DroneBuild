@@ -8,4 +8,4 @@
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git
 rm -rf *zip
 git add . && git commit -m "REMOVE FILE" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel.git 4.4
