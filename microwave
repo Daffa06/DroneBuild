@@ -6,6 +6,6 @@
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
 # bash kernel.sh
 
-git clone https://github.com/krasCGQ/build-tools-gcc.git
-cd build-tools-gcc
-./build -a arm64 -s linaro -v 8 -V 
+git clone https://github.com/mvaisakh/gcc-build
+cd gcc-build
+./build-gcc.sh -a arm64
