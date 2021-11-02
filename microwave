@@ -11,6 +11,6 @@ chmod +x build-gcc.sh
 ./build-gcc.sh -a arm64
 cd ../gcc-arm64
 git init
-git add . && git commit -m "Initial Import GCC linaro" --signoff
-git branch -M neko-linaro
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git neko-linaro
+git add . && git commit -m "Initial Import GCC Edge" --signoff
+git branch -M edge
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git edge
