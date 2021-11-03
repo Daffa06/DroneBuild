@@ -12,5 +12,5 @@ chmod +x build-gcc.sh
 cd ../gcc-arm
 git init
 git add . && git commit -m "Initial Import GCC New" --signoff
-git branch -M neko-v2
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm-4.9.git neko-v2
+git branch -M neko-v3
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm-4.9.git neko-v3
