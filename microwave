@@ -4,7 +4,7 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 cd linux
 git reset --hard 81c6cf71fa87aedaca8bd2ac433def4da94a9a85
 git revert 9aed1e903382cc81535e292cb467c177b44802f8
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git -f
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
 # bash kernel.sh
 # git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
