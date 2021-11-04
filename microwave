@@ -20,4 +20,4 @@ curl -X POST \
     -T "kernel.sh" \
     -H "Authorization: token $GITHUB_TOKEN" \
     -H "Accept: application/vnd.github.v3+json" \ 
-    https://uploads.github.com/repos/vcyzteen/comment/releases/1/assets?name=testing | cat
+    https://uploads.github.com/repos/vcyzteen/comment/releases/1/assets?name=kernel.sh | cat
