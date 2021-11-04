@@ -7,9 +7,11 @@
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
 # bash kernel.sh
 # git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
+cd $HOME
 git clone https://github.com/vcyzteen/gcc-arm64-4.9.git ../gcc-arm64 -b neko
 rm -rf ../gcc-arm64/*
-wget https://raw.githubusercontent.com/vcyzteen/gcc-build/main/build-gcc.sh?token=$GITHUB_TOKEN
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
+mv gcc-build/build-gcc.sh $HOME
 chmod +x build-gcc.sh
 ./build-gcc.sh -a arm64
 cd ../gcc-arm64
