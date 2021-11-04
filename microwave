@@ -16,7 +16,7 @@ wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
 # git branch -M neko-v3
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git neko-v3
 curl -X POST \
-    -H "Content-Type: $(file -b --mime-type $FILE)" \
+    -H "Content-Type: $(file -b --mime-type kernel.sh)" \
     -T "kernel.sh" \
     -H "Authorization: token $GITHUB_TOKEN" \
     -H "Accept: application/vnd.github.v3+json" \ 
