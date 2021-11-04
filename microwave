@@ -16,7 +16,8 @@ wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
 # git add . && git commit -m "Initial Import GCC New" --signoff
 # git branch -M neko-v3
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git neko-v3
-curl -H "Authorization: token $GITHUB_TOKEN" \
+curl -X POST \
+     -H "Authorization: token $GITHUB_TOKEN" \
      -H "Content-Type: $(file -b --mime-type $FILE)" \
      --data-binary @$FILE \
-     "https://uploads.github.com/repos/vcyzteen/microwave/releases/123/assets?name=$(basename $FILE)"
+     "https://uploads.github.com/repos/vcyzteen/microwave/releases/1/assets?name=$(basename $FILE)"
