@@ -18,4 +18,4 @@ wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
 curl -i -X PUT -H ‘Authorization: token "$GITHUB_TOKEN"’ -d
 ‘{“message”: “uploading a kernel.sh”,
 “content”:”bXkgbm……………………………..”
-}’ https://api.github.com/repos/vcyzteen/comment/contents/kernel.sh
+}’ https://api.github.com/repos/vcyzteen/comment/releases/kernel.sh
