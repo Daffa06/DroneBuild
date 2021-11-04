@@ -20,6 +20,6 @@ cd ../gcc-arm64
 ./bin/aarch64-linux-gnu-ld.bfd -v 2>&1 | tee /tmp/bfd-arm64-version
 git init
 git add . -f
-git commit -as -m "Import GCC : Neko@Vcyz" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" -m "BFD: $(/bin/cat /tmp/bfd-arm64-version)"
+git commit -as -m "Import GCC : Neko@Vcyz" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" -m "BFD: $(/bin/cat /tmp/bfd-arm64-version)"
 git gc
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git neko -f
