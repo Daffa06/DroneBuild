@@ -12,6 +12,7 @@ git clone https://github.com/vcyzteen/gcc-arm64-4.9.git ../gcc-arm64 -b neko
 rm -rf ../gcc-arm64/*
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
 mv gcc-build/build-gcc.sh $HOME
+rm -rf gcc-build
 chmod +x build-gcc.sh
 ./build-gcc.sh -a arm64
 cd ../gcc-arm64
