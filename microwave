@@ -15,9 +15,7 @@ wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
 # git add . && git commit -m "Initial Import GCC New" --signoff
 # git branch -M neko-v3
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git neko-v3
-curl -X POST \
-    -H "Content-Type: $(file -b --mime-type kernel.sh)" \
-    -T "kernel.sh" \
-    -H "Authorization: token $GITHUB_TOKEN" \
-    -H "Accept: application/vnd.github.v3+json" \ 
-    https://uploads.github.com/repos/vcyzteen/comment/releases/1/assets?name=kernel.sh | cat
+curl -i -X PUT -H ‘Authorization: token "$GITHUB_TOKEN"’ -d
+‘{“message”: “uploading a kernel.sh”,
+“content”:”bXkgbm……………………………..”
+}’ https://api.github.com/repos/vcyzteen/comment/contents/kernel.sh
