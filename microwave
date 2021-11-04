@@ -8,18 +8,18 @@
 # bash kernel.sh
 # git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
 cd $HOME
-git clone https://github.com/vcyzteen/gcc-arm64-4.9.git ../gcc-arm64 -b neko
-rm -rf ../gcc-arm64/*
+git clone https://github.com/vcyzteen/gcc-arm-4.9.git ../gcc-arm -b neko
+rm -rf ../gcc-arm/*
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
 mv gcc-build/build-gcc.sh $HOME
 rm -rf gcc-build
 chmod +x build-gcc.sh
-./build-gcc.sh -a arm64
-cd ../gcc-arm64
-./bin/aarch64-linux-gnu-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
-./bin/aarch64-linux-gnu-ld.bfd -v 2>&1 | tee /tmp/bfd-arm64-version
+./build-gcc.sh -a arm
+cd ../gcc-arm
+./bin/arm-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm-version
+./bin/arm-linux-gnueabi-ld.bfd -v 2>&1 | tee /tmp/bfd-arm-version
 git init
 git add . -f
-git commit -as -m "Import GCC : Neko@Vcyz" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" -m "BFD: $(/bin/cat /tmp/bfd-arm64-version)"
+git commit -as -m "Import GCC : Neko@Vcyz" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" -m "BFD: $(/bin/cat /tmp/bfd-arm-version)"
 git gc
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git neko -f
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm-4.9.git neko -f
