@@ -10,7 +10,7 @@
 # cd $HOME
 git clone https://github.com/vcyzteen/gcc-arm-4.9.git arm -b neko-v1
 git clone https://github.com/vcyzteen/gcc-arm-4.9.git edge -b edge
-mv edge/* arm/
+cp -r edge/* arm/
 cd arm
 # git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
 # mv gcc-build/build-gcc.sh $HOME
