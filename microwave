@@ -8,8 +8,8 @@
 # bash kernel.sh
 # git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
 # cd $HOME
-git clone https://github.com/vcyzteen/gcc-arm-4.9.git arm -b neko-v1
-git clone https://github.com/vcyzteen/gcc-arm-4.9.git edge -b edge
+git clone https://github.com/vcyzteen/gcc-arm64-4.9.git arm -b neko-v1
+git clone https://github.com/vcyzteen/gcc-arm64-4.9.git edge -b edge
 cp -r edge/* arm/
 cd arm
 # git clone https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-build.git
@@ -25,4 +25,4 @@ git add .
 # git commit -as -m "Import GCC : Neko@Vcyz" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" -m "BFD: $(/bin/cat /tmp/bfd-arm-version)"
 # git gc
 git commit -as -m "Import GCC : Neko@Vcyz" 
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm-4.9.git neko-v1
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git neko-v1
