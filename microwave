@@ -1,21 +1,21 @@
 #!/bin/bash
 # your code goes here
-# git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
-# cd linux
+git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+cd linux
 # git log 10
 # git diff
 # git cherry-pick 85e4fcfe0f5bf2285e78aa22efb54bda0209732a 85e4fcfe0f5bf2285e78aa22efb54bda0209732a d9c36fd359b6f957293f7e5fc6b49bd67012d919 0d66d4b3b3fb003cffb6d78f212ddc709be911e8 404194e40d242b85d05415f954ae90fee1392af3 81c6cf71fa87aedaca8bd2ac433def4da94a9a85
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
-# bash kernel.sh
-git clone https://github.com/vcyzteen/gcc-arm.git ../gcc-arm -b neko
-rm -rf ../gcc-arm/*
-wget https://raw.githubusercontent.com/vcyzteen/gcc-build/main/build-gcc.sh
-chmod a+x build-*.sh
-./build-gcc.sh -a arm
-cd ../gcc-arm
-./bin/arm-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm-version
-git add . -f
-git commit -as -m "Build NeVix GCC: Arm" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" --signoff
-git gc
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm.git neko -f
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
+bash kernel.sh
+# git clone https://github.com/vcyzteen/gcc-arm.git ../gcc-arm -b neko
+# rm -rf ../gcc-arm/*
+# wget https://raw.githubusercontent.com/vcyzteen/gcc-build/main/build-gcc.sh
+# chmod a+x build-*.sh
+# ./build-gcc.sh -a arm
+# cd ../gcc-arm
+# ./bin/arm-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm-version
+# git add . -f
+# git commit -as -m "Build NeVix GCC: Arm" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" --signoff
+# git gc
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm.git neko -f
