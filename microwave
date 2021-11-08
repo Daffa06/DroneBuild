@@ -13,6 +13,7 @@ chmod a+x build-*.sh
 ./build-gcc.sh -a arm64
 cd ../gcc-arm64
 ./bin/aarch64-linux-gnu-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
+git init
 git add .
 git branch -M bakend-arm64
 git commit -as -m "Build Toolchain GCC: Bakend Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff
