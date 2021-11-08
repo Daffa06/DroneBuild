@@ -13,9 +13,8 @@ chmod a+x build-*.sh
 ./build-gcc.sh -a arm64
 cd ../gcc-arm64
 ./bin/aarch64-linux-gnu-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
-./bin/aarch64-linux-gnu-ld.lld -v 2>&1 | tee /tmp/lld-arm64-version
 git add .
 git branch -M bakend-arm64
-git commit -as -m "Build Toolchain GCC: Bakend Arm64" -m "${{ steps.get-date.outputs.date }}" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" -m "LLD: $(/bin/cat /tmp/lld-arm64-version)"
+git commit -as -m "Build Toolchain GCC: Bakend Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff
 git gc
 git push https://$GITHUB_TOKEN@github.com/Baka-Project/BakaGCC.git bakend-arm64
