@@ -8,14 +8,14 @@
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
 # bash kernel.sh
+git clone https://github.com/vcyzteen/gcc-arm64-4.9.git ../gcc-arm64 -b neko
+rm -rf ../gcc-arm64/*
 wget https://raw.githubusercontent.com/vcyzteen/gcc-build/main/build-gcc.sh
 chmod a+x build-*.sh
 ./build-gcc.sh -a arm64
 cd ../gcc-arm64
 ./bin/aarch64-linux-gnu-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
-git init
-git add .
-git branch -M bakend-arm64
-git commit -as -m "Build Toolchain GCC: Bakend Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff
+git add . -f
+git commit -as -m "Build NeVix GCC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff
 git gc
-git push https://$GITHUB_TOKEN@github.com/Baka-Project/BakaGCC.git bakend-arm64
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64-4.9.git neko -f
