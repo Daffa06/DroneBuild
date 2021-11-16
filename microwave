@@ -2,15 +2,13 @@
 # your code goes here
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # cd linux
-cd $HOME
-git clone https://github.com/vcyzteen/dotclean.git
-git clone https://github.com/vinceliuice/Orchis-theme.git
-cp Orchis-theme/release/Orchis.tar.xz $HOME
-tar -xvf Orchis.tar.xz
-cp -r Orchis-dark-compact dotclean/.themes
-cd dotclean
-git add . && git commit -m "[GTK] Added New Theme `DARK`" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/dotclean.git dotclean
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/MPlus.zip
+unzip MPlus.zip
+cd MPlus
+git init
+git branch -M nerd
+git add . && git commit -m "[MIRROR] Initial Import" --signoff
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/Mplus-Nerd.git nerd
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-rev -f
 # git log 10
 # git diff
