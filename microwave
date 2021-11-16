@@ -1,9 +1,17 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
-cd linux
-git reset --hard a774403a7d3aa8409d056124fb3b509fd449185e
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-rev -f
+# git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+# cd linux
+cd $HOME
+git clone https://github.com/vcyzteen/dotclean.git
+git clone https://github.com/vinceliuice/Orchis-theme.git
+mv Orchis-theme/release/Orchis.tar.gz $HOME
+tar -xvf Orchis.tar.gz
+mv Orchis-dark-compact dotclean/.themes
+cd dotclean
+git add . && git commit -m "[GTK] Added New Theme `DARK`" --signoff
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/dotclean.git dotclean
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-rev -f
 # git log 10
 # git diff
 # git cherry-pick 85e4fcfe0f5bf2285e78aa22efb54bda0209732a 85e4fcfe0f5bf2285e78aa22efb54bda0209732a d9c36fd359b6f957293f7e5fc6b49bd67012d919 0d66d4b3b3fb003cffb6d78f212ddc709be911e8 404194e40d242b85d05415f954ae90fee1392af3 81c6cf71fa87aedaca8bd2ac433def4da94a9a85
