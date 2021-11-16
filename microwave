@@ -5,7 +5,7 @@
 cd $HOME
 git clone https://github.com/vcyzteen/dotclean.git
 git clone https://github.com/vinceliuice/Orchis-theme.git
-mv Orchis-theme/release/Orchis.tar.gz $HOME
+cp Orchis-theme/release/Orchis.tar.gz $HOME
 tar -xvf Orchis.tar.gz
 cp -r Orchis-dark-compact dotclean/.themes
 cd dotclean
