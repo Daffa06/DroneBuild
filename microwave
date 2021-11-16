@@ -5,7 +5,9 @@
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/MPlus.zip
 unzip MPlus.zip
 cd MPlus
+git lfs install
 git init
+git lfs track "*.ttf"
 git branch -M nerd
 git add . && git commit -m "[MIRROR] Initial Import" --signoff
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/Mplus-Nerd.git nerd
