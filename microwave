@@ -4,10 +4,9 @@
 # cd linux
 cd $HOME
 git clone https://github.com/vcyzteen/dotclean.git
-git clone https://github.com/vinceliuice/Orchis-theme.git
-cp Orchis-theme/release/Orchis.tar.gz $HOME
-tar -xvf Orchis.tar.gz
-cp -r Orchis/Orchis-dark-compact dotclean/.themes
+wget https://github.com/vinceliuice/Orchis-theme/blob/master/release/Orchis.tar.xz
+tar -xvf Orchis.tar.xz
+cp -r Orchis-dark-compact dotclean/.themes
 cd dotclean
 git add . && git commit -m "[GTK] Added New Theme `DARK`" --signoff
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/dotclean.git dotclean
