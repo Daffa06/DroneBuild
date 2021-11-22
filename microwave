@@ -17,13 +17,13 @@
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
 # bash kernel.sh
 wget https://raw.githubusercontent.com/vcyzteen/gcc-build/main/build-gcc.sh
-git clone https://github.com/vcyzteen/gcc-arm.git ../gcc-arm -b neko
-rm -rf ../gcc-arm/*
+git clone https://github.com/vcyzteen/gcc-arm64.git ../gcc-arm64 -b neko
+rm -rf ../gcc-arm64/*
 chmod a+x build-*.sh
-./build-gcc.sh -a arm
+./build-gcc.sh -a arm64
 cd ../gcc-arm
-./bin/arm-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm-version
+./bin/aarch64-linux-gnu-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
 git add . -f
-git commit -as -m "Build NeVixTC: Arm" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" --signoff
+git commit -as -m "Build NeVixTC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff
 git gc
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm.git neko -f
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64.git neko -f
