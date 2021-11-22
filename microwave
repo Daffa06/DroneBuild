@@ -2,15 +2,13 @@
 # your code goes here
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # cd linux
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/MPlus.zip
-unzip MPlus.zip
-cd MPlus
-git lfs install
+wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
+tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
+cd msm-4.4/arch/arm64/configs
 git init
-git lfs track "*.ttf"
-git branch -M nerd
-git add . && git commit -m "[MIRROR] Initial Import" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/Mplus-Nerd.git nerd
+git add . && git commit -m "[Files] Initial Import defconfig `X00T` from source original" -m "url: https://www.asus.com/supportonly/ZenFone%20Max%20Pro(M1)(ZB602KL)/HelpDesk_Download" --signoff
+git branch -M master
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/defconfig.git master
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-rev -f
 # git log 10
 # git diff
