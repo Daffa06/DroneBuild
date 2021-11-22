@@ -12,6 +12,8 @@ steps:
         from_secret: GH_TOKEN
       GITLAB_TOKEN:
         from_secret: GL_TOKEN
+      WGET_TOKEN:
+        from_secret: WG_TOKEN
     image: vcyzteen/nekopunchy:poi
     name: burning
     trigger: 
