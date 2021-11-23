@@ -1,10 +1,11 @@
 #!/bin/bash
 # your code goes here
 git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
-git clone https://github.com/xanmod/linux.git xanmod -b 5.15
-cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
+# git clone https://github.com/xanmod/linux.git xanmod -b 5.15
+# cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
 cd linux
+git reset --hard 3faba7ea06739257aa6bca150c2f3952366b9989
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
 # cd msm-4.4
@@ -13,7 +14,7 @@ cd linux
 # rm -rf .git
 # git init
 # git branch -M master
-git add . && git commit -m "[TCP] test net from latest kernel" --signoff
+# git add . && git commit -m "[TCP] test net from latest kernel" --signoff
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/perf-original.git master -f
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-rev -f
 # git log 10
