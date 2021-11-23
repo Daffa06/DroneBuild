@@ -4,7 +4,7 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # cd linux
 wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
-cp -r msm-4.4/linux linux/
+cp -r msm-4.4/include/linux linux/include
 cd linux
 # git init
 git add . && git commit -m "[TREEWIDE] import linux `X00T` from source original" -m "url: https://www.asus.com/supportonly/ZenFone%20Max%20Pro(M1)(ZB602KL)/HelpDesk_Download" --signoff
