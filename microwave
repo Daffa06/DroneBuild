@@ -7,7 +7,7 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-var
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
 cd linux
-git fetch https://github.com/vcyzteen/linux.git 4.4-var
+git fetch https://github.com/vcyzteen/linux.git 4.4-rev
 git cherry-pick 8fba1ce239d3e459a62d1940532023e223739343
 # wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
 # bash baka-merged
