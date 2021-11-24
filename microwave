@@ -7,8 +7,6 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-var
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
 cd linux
-git fetch https://github.com/vcyzteen/linux.git 4.4-rev
-git cherry-pick f300b84dccaa1ea6042d2fb69ff973f693a3bd62
 # wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
 # bash baka-merged
 # rm -rf baka-merged
@@ -35,8 +33,8 @@ git cherry-pick f300b84dccaa1ea6042d2fb69ff973f693a3bd62
 # git diff
 # git cherry-pick 85e4fcfe0f5bf2285e78aa22efb54bda0209732a 85e4fcfe0f5bf2285e78aa22efb54bda0209732a d9c36fd359b6f957293f7e5fc6b49bd67012d919 0d66d4b3b3fb003cffb6d78f212ddc709be911e8 404194e40d242b85d05415f954ae90fee1392af3 81c6cf71fa87aedaca8bd2ac433def4da94a9a85
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-# bash kernel.sh
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+bash kernel.sh
 # wget https://raw.githubusercontent.com/vcyzteen/gcc-build/main/build-gcc.sh
 # git clone https://github.com/vcyzteen/gcc-arm64.git ../gcc-arm64 -b neko
 # rm -rf ../gcc-arm64/*
@@ -48,4 +46,4 @@ git cherry-pick f300b84dccaa1ea6042d2fb69ff973f693a3bd62
 # git commit -as -m "Build NeVixTC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff# 
 # git gc
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64.git neko -f
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-var
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-var
