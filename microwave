@@ -7,7 +7,7 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-var
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
 cd linux
-wget https://raw.githubusercontent.com/Baka-Project/Baka-Merged/baka/baka-merged
+wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
 bash baka-merged
 rm -rf baka-merged
 git fetch https://github.com/cryptomilk/kernel-sdfat.git master
