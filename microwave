@@ -7,17 +7,17 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-var
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
 cd linux
-wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
-bash baka-merged
-rm -rf baka-merged
-git fetch https://github.com/cryptomilk/kernel-sdfat.git master
+# wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
+# bash baka-merged
+# rm -rf baka-merged
+git fetch git fetch https://source.codeaurora.org/external/mas/tfa98xx DIN_v6x
 git merge --no-commit FETCH_HEAD
-git read-tree --prefix=fs/sdfat -u FETCH_HEAD
-git commit -m "Merged sdfat https://github.com/cryptomilk/kernel-sdfat into MinerV" --signoff
-git fetch https://github.com/arter97/exfat-linux.git master
-git merge --no-commit FETCH_HEAD
-git read-tree --prefix=fs/exfat -u FETCH_HEAD
-git commit -m "Merged exfat https://github.com/arter97/exfat-linux into MinerV" --signoff
+git read-tree --prefix=sound/soc/codecs/tfa9874 -u FETCH_HEAD
+git commit -m "Merged tfa-audio https://source.codeaurora.org/external/mas/tfa98xx into MinerV" --signoff
+# git fetch https://github.com/arter97/exfat-linux.git master
+# git merge --no-commit FETCH_HEAD
+# git read-tree --prefix=fs/exfat -u FETCH_HEAD
+# git commit -m "Merged exfat https://github.com/arter97/exfat-linux into MinerV" --signoff
 # git reset --hard 3faba7ea06739257aa6bca150c2f3952366b9989
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
