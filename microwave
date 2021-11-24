@@ -17,9 +17,9 @@ cd msm
 # git init
 git checkout -b 5-14
 git config --global http.version HTTP/1.1
+git config http.postBuffer 524288000
 # git add . && git commit -m "[TCP] test net from latest kernel" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 5-14
-git config --global http.version HTTP/2
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 5-14 -f
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-rev
 # git log 10
 # git diff
