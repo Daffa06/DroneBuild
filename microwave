@@ -1,10 +1,14 @@
 #!/bin/bash
 # your code goes here
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+git clone https://github.com/vcyzteen/linux.git -b 4.4-new
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
-# cd linux
+cd linux
+wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
+bash baka-merged
+rm -rf baka-merged
 # git reset --hard 3faba7ea06739257aa6bca150c2f3952366b9989
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
@@ -34,10 +38,4 @@
 # git commit -as -m "Build NeVixTC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff# 
 # git gc
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64.git neko -f
-git clone https://source.codeaurora.org/quic/la/kernel/msm-4.4 -b korg/stable/linux-4.4.y
-cd msm-4.4
-git fetch https://source.codeaurora.org/quic/la/kernel/msm-4.4 aosp/android-4.4-p
-git merge --no-commit FETCH_HEAD
-git commit -m "Merged Kernel Linux" -m "https://source.codeaurora.org/quic/la/kernel/msm-4.4" --signoff
-git branch -M 4.4-new
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-new
