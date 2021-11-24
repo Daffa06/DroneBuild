@@ -3,10 +3,21 @@
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-new
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
-git clone https://source.codeaurora.org/quic/la/kernel/msm-4.4 -b kernel.lnx.4.4.r42-rel
+git clone https://github.com/vcyzteen/linux.git -b 4.4-var
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
-cd msm-4.4
+cd linux
+wget https://raw.githubusercontent.com/Baka-Project/Baka-Merged/baka/baka-merged
+bash baka-merged
+rm -rf baka-merged
+git fetch https://github.com/cryptomilk/kernel-sdfat.git master
+git merge --no-commit FETCH_HEAD
+git read-tree --prefix=fs/sdfat -u FETCH_HEAD
+git commit -m "Merged sdfat https://github.com/cryptomilk/kernel-sdfat into MinerV" --signoff
+git fetch https://github.com/arter97/exfat-linux.git master
+git merge --no-commit FETCH_HEAD
+git read-tree --prefix=fs/exfat -u FETCH_HEAD
+git commit -m "Merged exfat https://github.com/arter97/exfat-linux into MinerV" --signoff
 # git reset --hard 3faba7ea06739257aa6bca150c2f3952366b9989
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
@@ -15,7 +26,6 @@ cd msm-4.4
 # cd linux
 # rm -rf .git
 # git init
-git branch -M 4.4-var
 # git add . && git commit -m "[TCP] test net from latest kernel" --signoff
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 5-14 -f
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-var
