@@ -7,7 +7,6 @@ git clone https://source.codeaurora.org/quic/la/kernel/msm -b korg/linux-5.15.y
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
 cd msm
-git config --global http.version HTTP/1.1
 # git reset --hard 3faba7ea06739257aa6bca150c2f3952366b9989
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
@@ -17,6 +16,7 @@ git config --global http.version HTTP/1.1
 # rm -rf .git
 # git init
 git checkout -b 5-14
+git config --global http.version HTTP/1.1
 # git add . && git commit -m "[TCP] test net from latest kernel" --signoff
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 5-14
 git config --global http.version HTTP/2
