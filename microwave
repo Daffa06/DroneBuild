@@ -49,4 +49,4 @@ git cherry-pick 8fe0f47bb6632448e2fb8863aa5d7a7bbeaf0e4b 8fe0f47bb6632448e2fb886
 # git commit -as -m "Build NeVixTC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff# 
 # git gc
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64.git neko -f
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-var
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-var -f
