@@ -57,3 +57,4 @@ git clone --depth=1 https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git
 cp runner/run.sh rodjogdam
 cd rodjogdam
 bash run.sh
+
