@@ -7,7 +7,7 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-var
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
 cd linux
-git add remote lima https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+git remote add lima https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
 git fetch lima v5.15.4
 git checkout lime/v5.15.4
 git checkout -b 5.15
