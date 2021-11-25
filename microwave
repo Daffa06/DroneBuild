@@ -3,7 +3,7 @@
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-new
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
-git clone https://github.com/vcyzteen/rodjogdam.git -b 4.4-var
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git -b 4.4-var
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
 cd rodjogdam
