@@ -53,3 +53,4 @@ git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 5.15
 # git gc
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64.git neko -f
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 5-15
+
