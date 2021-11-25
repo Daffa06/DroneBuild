@@ -3,13 +3,15 @@
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-new
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
-git clone https://github.com/vcyzteen/linux.git -b 4.4-var
+git clone https://github.com/vcyzteen/rodjogdam.git -b 4.4-var
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
 # cp -r xanmod/net/ipv6 linux/net
-cd linux
+cd rodjogdam
 # git checkout -b 5.15
 # git reset --hard 7d0d2ee8c1456718bf198ab824d452f9bba81047
-# git fetch https://github.com/vcyzteen/linux.git 4.4-rev
+git fetch https://github.com/vcyzteen/linux.git 5-15
+git checkout FETCH_HEAD
+git checkout -b 5.15
 # git cherry-pick 8fe0f47bb6632448e2fb8863aa5d7a7bbeaf0e4b 8fe0f47bb6632448e2fb8863aa5d7a7bbeaf0e4b eaaf1e5437a8d6497e2d73fb45f70e222aae4c2e
 # wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
 # bash baka-merged
@@ -31,7 +33,7 @@ cd linux
 # rm -rf .git
 # git init
 # git add . && git commit -m "[TCP] test net from latest kernel" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 4.4-var
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 5.15
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-var
 # git log 10
 # git diff
