@@ -3,6 +3,7 @@
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-new
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
+cd $HOME
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/runner.git
 git clone --depth=1 https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git
 # cp -r xanmod/net/ipv4/tcp* linux/net/ipv4
