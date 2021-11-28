@@ -1,8 +1,7 @@
 #!/bin/bash
 # your code goes here
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
-# git clone https://github.com/vcyzteen/linux.git -b 4.4-new
-git clone https://source.codeaurora.org/quic/la/kernel/msm-4.4 -b v4.4.293
+git clone https://github.com/vcyzteen/linux.git -b 4.4-new
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
 # cd $HOME
 # git clone https://$GITHUB_TOKEN@github.com/vcyzteen/runner.git
@@ -29,11 +28,14 @@ git clone https://source.codeaurora.org/quic/la/kernel/msm-4.4 -b v4.4.293
 # git reset --hard 3faba7ea06739257aa6bca150c2f3952366b9989
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
-cd msm-4.4
-git fetch https://source.codeaurora.org/quic/la/kernel/msm-4.4 aosp/android-4.4-p
-git merge --no-commit FETCH_HEAD
-git add . && git commit -m "merged aosp/android-4.4-p" --signoff
-git checkout -b 4.4-new
+cd linux
+wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
+bash baka-merged
+rm -rf baka-merged
+# git fetch https://source.codeaurora.org/quic/la/kernel/msm-4.4 aosp/android-4.4-p
+# git merge --no-commit FETCH_HEAD
+# git add . && git commit -m "merged aosp/android-4.4-p" --signoff
+# git checkout -b 4.4-new
 # cp -r msm-4.4/include/linux linux/include
 # cd linux
 # rm -rf .git
