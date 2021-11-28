@@ -60,7 +60,7 @@ rm -rf baka-merged
 # git commit -as -m "Build NeVixTC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff# 
 # git gc
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64.git neko -f
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-new
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-new
 # cp runner/run.sh rodjogdam
 # cd rodjogdam
 # bash run.sh
