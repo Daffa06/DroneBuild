@@ -1,7 +1,8 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+# git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-new
+git clone https://source.codeaurora.org/quic/la/kernel/msm-4.4 -b v4.4.293
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
 # cd $HOME
 # git clone https://$GITHUB_TOKEN@github.com/vcyzteen/runner.git
@@ -28,9 +29,13 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # git reset --hard 3faba7ea06739257aa6bca150c2f3952366b9989
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
-# cd msm-4.4
+cd msm-4.4
+git fetch https://source.codeaurora.org/quic/la/kernel/msm-4.4 aosp/android-4.4-p
+git merge --no-commit FETCH_HEAD
+git add . && git commit -m "merged aosp/android-4.4-p" --signoff
+git branch -M 4.4-new
 # cp -r msm-4.4/include/linux linux/include
-cd linux
+# cd linux
 # rm -rf .git
 # git init
 # git add . && git commit -m "[TCP] test net from latest kernel" --signoff
@@ -40,8 +45,8 @@ cd linux
 # git diff
 # git cherry-pick 85e4fcfe0f5bf2285e78aa22efb54bda0209732a 85e4fcfe0f5bf2285e78aa22efb54bda0209732a d9c36fd359b6f957293f7e5fc6b49bd67012d919 0d66d4b3b3fb003cffb6d78f212ddc709be911e8 404194e40d242b85d05415f954ae90fee1392af3 81c6cf71fa87aedaca8bd2ac433def4da94a9a85
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
-bash kernel.sh
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/testgcc/kernel.sh
+# bash kernel.sh
 # wget https://raw.githubusercontent.com/vcyzteen/gcc-build/main/build-gcc.sh
 # git clone https://github.com/vcyzteen/gcc-arm64.git ../gcc-arm64 -b neko
 # rm -rf ../gcc-arm64/*
@@ -53,7 +58,7 @@ bash kernel.sh
 # git commit -as -m "Build NeVixTC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff# 
 # git gc
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64.git neko -f
-# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 5-15
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-new
 # cp runner/run.sh rodjogdam
 # cd rodjogdam
 # bash run.sh
