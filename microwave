@@ -57,7 +57,7 @@ chmod a+x build-*.sh
 cd ../gcc-arm64
 ./bin/aarch64-linux-gnu-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
 git add . -f
-git commit -as -m "Build NeVixTC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff# 
+git commit -as -m "Build NeVixTC: Arm64" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" --signoff
 git gc
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64.git neko-v1 -f
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-new
