@@ -54,7 +54,7 @@ git clone https://github.com/vcyzteen/gcc-arm64.git ../gcc-arm -b neko-v1
 rm -rf ../gcc-arm/*
 chmod a+x build-*.sh
 ./build-gcc.sh -a arm
-cd ../gcc-arm64
+cd ../gcc-arm
 ./bin/arm-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm-version
 git add . -f
 git commit -as -m "Build NeVixTC: Arm" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" --signoff
