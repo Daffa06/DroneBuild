@@ -29,6 +29,7 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
 cd linux
+git reset --hard dc77b0d7296b4cb3a3fd8b1eeba8f8994e194ff7
 # wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
 # bash baka-merged
 # rm -rf baka-merged
