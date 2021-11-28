@@ -33,7 +33,7 @@ cd msm-4.4
 git fetch https://source.codeaurora.org/quic/la/kernel/msm-4.4 aosp/android-4.4-p
 git merge --no-commit FETCH_HEAD
 git add . && git commit -m "merged aosp/android-4.4-p" --signoff
-git branch -M 4.4-new
+git checkout -b 4.4-new
 # cp -r msm-4.4/include/linux linux/include
 # cd linux
 # rm -rf .git
