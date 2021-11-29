@@ -1,6 +1,7 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+# git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
+git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-new
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
 # cd $HOME
