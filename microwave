@@ -1,7 +1,7 @@
 #!/bin/bash
 # your code goes here
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-rev
-git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
+git clone --single-branch https://github.com/vcyzteen/linux.git -b 4.4-bfq
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-new
 # git clone https://github.com/xanmod/linux.git xanmod -b 5.15
 # cd $HOME
@@ -30,7 +30,7 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
 cd linux
-git fetch https://github.com/vcyzteen/rodjogdam.git 5.15
+# git fetch https://github.com/vcyzteen/rodjogdam.git 5.15
 # git reset --hard c2862034c08007dced8845445a1e0acd03c1ad79
 # wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
 # bash baka-merged
@@ -48,10 +48,10 @@ git fetch https://github.com/vcyzteen/rodjogdam.git 5.15
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-var
 # git log 10
 # git diff
-git cherry-pick de1df26b7cef702a32ae876ed45c1112f523df48
+# git cherry-pick de1df26b7cef702a32ae876ed45c1112f523df48
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-# bash kernel.sh
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+bash kernel.sh
 # wget https://raw.githubusercontent.com/vcyzteen/gcc-build/main/build-gcc.sh
 # git clone https://github.com/vcyzteen/gcc-arm64.git ../gcc-arm -b neko-v1
 # rm -rf ../gcc-arm/*
@@ -63,7 +63,7 @@ git cherry-pick de1df26b7cef702a32ae876ed45c1112f523df48
 # git commit -as -m "Build NeVixTC: Arm" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" --signoff
 # git gc
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm.git neko-v1 -f
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-bfq
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-bfq
 # cp runner/run.sh rodjogdam
 # cd rodjogdam
 # bash run.sh
