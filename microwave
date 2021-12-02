@@ -2,7 +2,5 @@
 # your code goes here
 git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
 cd linux
-git reset --hard d67f1679004b3cb2c0ad5a3d6394029089ca6b2a
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-bfq -f
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-# bash kernel.sh
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+bash kernel.sh
