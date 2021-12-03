@@ -5,4 +5,4 @@ cd linux
 git reset --hard d1ca1602430aceb978125072720e260bca9619ce
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
 # bash kernel.sh
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-bfq
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-bfq -f
