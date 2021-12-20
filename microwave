@@ -4,7 +4,7 @@
 # cd linux
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
 # bash kernel.sh
-git clone https://chromium.googlesource.com/chromiumos/third_party/kernel -b chromeos-5.4
+git clone https://chromium.googlesource.com/chromiumos/third_party/kernel -b chromeos-4.4
 cd kernel
-git checkout -b master
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/chromeos-kernel.git master
+git checkout -b chromeos-4.4
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/chromeos-kernel.git chromeos-4.4
