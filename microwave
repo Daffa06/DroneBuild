@@ -1,6 +1,10 @@
 #!/bin/bash
 # your code goes here
-git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
-cd linux
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-bash kernel.sh
+# git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
+# cd linux
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+# bash kernel.sh
+git clone https://chromium.googlesource.com/chromiumos/third_party/kernel -b chromeos-5.4
+cd kernel
+git checkout -b master
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/chromeos-kernel.git master
