@@ -1,7 +1,7 @@
 #!/bin/bash
 # your code goes here
 neofetch
-git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
-cd linux
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-bash kernel.sh
+# git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
+# cd linux
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+# bash kernel.sh
