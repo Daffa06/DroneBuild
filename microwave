@@ -1,7 +1,12 @@
 #!/bin/bash
 # your code goes here
 neofetch
-cat /etc/ssh/sshd_config
+git clone https://github.com/vcyzteen/rodjogdam.git -b 5.15
+cd rodjogdam
+git fetch https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git linux-5.15.y
+git merge --no-commit FETCH_HEAD
+git commit -m "Merged rodjogdam into linux-5.15y" --signoff
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 5.15
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
 # cd linux
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
