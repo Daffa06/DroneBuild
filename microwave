@@ -8,8 +8,8 @@ git cherry-pick bef01beaa7829ff5620c6bf00c86453d5487d4ce
 cp CONFIGS/xanmod/gcc/config .config
 make oldconfig
 make
-make INSTALL_MOD_STRIP=1 modules_install
-make install
+sudo make modules_install 
+sudo make install
 ls /boot
 ls kernel
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
