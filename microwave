@@ -1,17 +1,18 @@
 #!/bin/bash
 # your code goes here
 neofetch
-git clone https://github.com/xanmod/linux -b 5.15
-cd linux
-git fetch https://github.com/vcyzteen/rodjogdam.git 5.15-musl
-git cherry-pick bef01beaa7829ff5620c6bf00c86453d5487d4ce
-cp CONFIGS/xanmod/gcc/config .config
-make oldconfig
-make
-sudo make modules_install 
-sudo make install
-ls /boot
-ls kernel
+git clone https://github.com/vcyzteen/rodjogdam.git -b 5.15
+cd rodjogdam
+wget https://raw.githubusercontent.com/void-linux/void-packages/master/srcpkgs/linux5.15/patches/ppc64-be-elfv2.patch
+wget https://raw.githubusercontent.com/void-linux/void-packages/master/srcpkgs/linux5.15/patches/ppc-vas-on-4k.patch
+wget https://raw.githubusercontent.com/void-linux/void-packages/master/srcpkgs/linux5.15/patches/fix-musl-objtool.patch
+wget https://raw.githubusercontent.com/void-linux/void-packages/master/srcpkgs/linux5.15/patches/btusb-quirk-HCI_FLT_CLEAR_ALL.patch
+cat ppc64-be-elfv2.patch | patch -Np1
+cat ppc-vas-on-4k.patch | patch -Np1
+cat fix-musl-objtool.patch | patch -Np1
+cat btusb-quirk-HCI_FLT_CLEAR_ALL.patch | patch -Np1
+git add . && git commit -m "[PATCH]: musl build linux & ppc64" --signoff
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/rodjogdam.git 5.15
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
 # cd linux
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
