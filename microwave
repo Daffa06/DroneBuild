@@ -3,5 +3,8 @@
 neofetch
 git clone https://github.com/vcyzteen/linux.git -b 4.4-bfq
 cd linux
+git reset --hard 4d5cd48c330d5269655bb9bf6bd2e585140a4716
+git cherry-pick 64c158c9a3e99875a0ccaa7894ae9a4aff782fa1 64c158c9a3e99875a0ccaa7894ae9a4aff782fa1 3c30c10759be486911596b7d7f3768a928b8b010 254c6e2519fa9471af231a78f1992d83d3818829 
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-bfq
 wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
 bash kernel.sh
