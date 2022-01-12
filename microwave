@@ -3,5 +3,7 @@
 neofetch
 git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
 cd linux
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-bash kernel.sh
+git revert 95230593b692da2b2633e8d7837dc19bf403160a 95230593b692da2b2633e8d7837dc19bf403160a 8abe82c488754f8acfe50f5a80e9f4f06dc3001c d06ef6cf54434cbd9f746e7e2181499f831b9799 
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+# bash kernel.sh
