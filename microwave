@@ -3,5 +3,7 @@
 neofetch
 git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
 cd linux
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-bash kernel.sh
+wget https://raw.githubusercontent.com/vcyzteen/Baka-Merged/baka/baka-merged
+bash baka-merged
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+# bash kernel.sh
