@@ -3,8 +3,6 @@
 neofetch
 git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
 cd linux
-git fetch https://source.codeaurora.org/quic/la/kernel/msm-4.4 LA.UM.8.2.r2-05400-sdm660.0 
-git merge FETCH_HEAD
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-# bash kernel.sh
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+bash kernel.sh
