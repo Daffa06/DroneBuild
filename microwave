@@ -2,6 +2,7 @@
 # your code goes here
 neofetch
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/clang-build.git
+chmod +x run
 bash run
 # git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
 # cd linux
