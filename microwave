@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # your code goes here
 neofetch
 git clone https://$GITHUB_TOKEN@github.com/vcyzteen/clang-build.git
