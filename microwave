@@ -1,8 +1,10 @@
 #!/bin/bash
 # your code goes here
 neofetch
-git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
-cd linux
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/clang-build.git
+bash run
+# git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
+# cd linux
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-bash kernel.sh
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+# bash kernel.sh
