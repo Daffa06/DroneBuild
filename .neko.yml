@@ -6,9 +6,9 @@ name: microwave
 steps: 
   - 
     commands: 
-      - sudo apt-get update -y
-      - sudo apt-get upgrade -y
-      - sudo apt-get install -y aptitude flex bison ncurses-dev texinfo gcc gperf patch libtool automake g++ libncurses5-dev gawk subversion expat libexpat1-dev python-all-dev binutils-dev bc libcap-dev autoconf libgmp-dev build-essential pkg-config libmpc-dev libmpfr-dev autopoint git gettext txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar gcc-10 g++-10 cmake zstd ninja-build lz4 liblz4-tool liblz4-dev lzma --fix-broken --fix-missing
+      - apt-get update -y
+      - apt-get upgrade -y
+      - apt-get install -y aptitude neofetch flex bison ncurses-dev texinfo gcc gperf patch libtool automake g++ libncurses5-dev gawk subversion expat libexpat1-dev python-all-dev binutils-dev bc libcap-dev autoconf libgmp-dev build-essential pkg-config libmpc-dev libmpfr-dev autopoint git gettext txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar gcc-10 g++-10 cmake zstd ninja-build lz4 liblz4-tool liblz4-dev lzma --fix-broken --fix-missing
       - bash microwave
     environment: 
       GITHUB_TOKEN:
