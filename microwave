@@ -5,5 +5,5 @@ git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
 cd linux
 # git reset --hard 8ffe31ad33d9be95aadb589533ec38034c0b4d8c
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs -f
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-# bash kernel.sh
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+bash kernel.sh
