@@ -2,8 +2,8 @@
 # your code goes here
 neofetch
 git clone https://github.com/xanmod/linux -b 5.16 xanmod
-cp -r xanmod/drivers/android linux/drivers
 git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
+cp -r xanmod/drivers/android linux/drivers
 cd linux
 git add . && git commit -m "upstream: binder: import latest binder from tag 5.16" --signoff
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs
