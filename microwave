@@ -3,9 +3,9 @@
 neofetch
 git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
 cd linux
-git reset --hard 6807d861c1253a6c82f8bc3bf128ea97b738ba68
-git cherry-pick be42cc151d4dbeec0dae579d0fd69d79835b1393 be42cc151d4dbeec0dae579d0fd69d79835b1393 b9c691895d3492b2c698be5367487a645f239ac2
+# git reset --hard 6807d861c1253a6c82f8bc3bf128ea97b738ba68
+# git cherry-pick be42cc151d4dbeec0dae579d0fd69d79835b1393 be42cc151d4dbeec0dae579d0fd69d79835b1393 b9c691895d3492b2c698be5367487a645f239ac2
 # git add . && git commit -m "upstream: binder: import latest binder from tag 5.16" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs -f
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-# bash kernel.sh
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs -f
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+bash kernel.sh
