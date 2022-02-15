@@ -10,7 +10,7 @@ cd perf
 git fetch https://github.com/vcyzteen/linux.git
 # git reset --hard 6807d861c1253a6c82f8bc3bf128ea97b738ba68
 git cherry-pick 8fba1ce239d3e459a62d1940532023e223739343 8fba1ce239d3e459a62d1940532023e223739343 f300b84dccaa1ea6042d2fb69ff973f693a3bd62 481693d92674200c855efe1a5b4e82f60c67cf8a 7a98c1cbc69c9d845becf5839eb45a7a0dfbf219 f92e1811ac9d6af35b9074ba6606e0f33055932e
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/perf.git main
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/perf.git master
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc/kernel.sh
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
 # bash kernel.sh
