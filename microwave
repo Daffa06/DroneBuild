@@ -1,14 +1,14 @@
 #!/bin/sh
 # your code goes here
 neofetch
-wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
-tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
+# wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
+# tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
 git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
-cp msm-4.4/arch/arm64/configs/sdm660_defconfig linux/arch/arm64/configs/sdm660_defconfig
+# cp msm-4.4/arch/arm64/configs/sdm660_defconfig linux/arch/arm64/configs/sdm660_defconfig
 cd linux
 # git reset --hard 6807d861c1253a6c82f8bc3bf128ea97b738ba68
 # git cherry-pick be42cc151d4dbeec0dae579d0fd69d79835b1393 be42cc151d4dbeec0dae579d0fd69d79835b1393 b9c691895d3492b2c698be5367487a645f239ac2
-git add . && git commit -m "defconfig: regen from source official" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
-# bash kernel.sh
+# git add . && git commit -m "defconfig: regen from source official" --signoff
+# git push https://$GITHUB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+bash kernel.sh
