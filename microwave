@@ -10,7 +10,7 @@ cd msm-4.4
 # git cherry-pick be42cc151d4dbeec0dae579d0fd69d79835b1393 be42cc151d4dbeec0dae579d0fd69d79835b1393 b9c691895d3492b2c698be5367487a645f239ac2
 git init
 git add . && git commit -m "import: kernel ajuj from official source" --signoff
-git branch -M main
-git push -u https://$GITHUB_TOKEN@github.com/vcyzteen/perf.git main
+git checkout -b main
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/perf.git main
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
 # bash kernel.sh
