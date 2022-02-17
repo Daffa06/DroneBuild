@@ -42,5 +42,5 @@ cd linux
 clear
 cp CONFIGS/xanmod/gcc/config .config
 tg_post_msg "<code>Starting Build Kernel Linux..</code>"
-make -j$(nproc --all) 0=out && make modules_install 2>&1 | tee error.log
+make -j$(nproc --all) 0=out && make modules_install -j$(nproc --all) 0=out 2>&1 | tee error.log
 tg_post_build "error.log" "*Build failed to compile*"
