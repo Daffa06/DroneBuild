@@ -1,7 +1,6 @@
 #!/bin/sh
 # your code goes here
-apt-get install -y neofetch libelf-dev cpio
-neofetch
+apt-get install -y libelf-dev cpio zstd
 
 ##---------------------------------------------------------##
 
@@ -41,5 +40,5 @@ cd linux
 # bash kernel.sh
 cp CONFIGS/xanmod/gcc/config .config
 tg_post_msg "<code>Starting Build Kernel Linux..</code>"
-make -j$(nproc --all) 0=out 2>&1 | tee error.log
+make -j$(nproc --all) 0=out -s 2>&1 | tee error.log
 tg_post_build "error.log" "*Build failed to compile*"
