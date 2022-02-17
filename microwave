@@ -1,5 +1,6 @@
 #!/bin/sh
 # your code goes here
+sudo apt-get install -y neofetch libelf-dev
 neofetch
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
