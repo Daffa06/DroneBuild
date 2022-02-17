@@ -1,7 +1,9 @@
 #!/bin/sh
 # your code goes here
-apt-get install -y libelf-dev cpio zstd fakeroot build-essential ncurses-dev xz-utils libssl-dev bc
+apt-get install -y libelf-dev cpio zstd fakeroot build-essential ncurses-dev xz-utils libssl-dev bc aria2
 clear
+mkdir dl
+cd dl
 
 ##---------------------------------------------------------##
 
@@ -27,10 +29,17 @@ tg_post_build() {
 	-F caption="$2 | *MD5 Checksum : *\`$MD5CHECK\`"
 }
 
+namefile() {
+        ls | awk '{ print $1 }'
+}
+file=namefile
+
+aria2c magnet:?xt=urn:btih:25fe2c60f85ae850e29228d1eab5abfb266e7a6c&dn=%5B2022.02.17%5D%20Honkai%20Impact%203rd%20-%20A%20Post-Honkai%20Odyssey%202%20%28Original%20Soundtrack%29%EF%BC%8F%E9%9F%B3%E6%A5%BD%EF%BC%9AHOYO-MiX%2C%20%E6%9D%8E%E6%95%AC%E6%B5%A9%20%5BFLAC%2048kHz%2F24bit%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce
+tg_post_build "$file" "*Uploaded...*"
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
-git clone --depth=1 https://github.com/xanmod/linux.git -b 5.16
-cd linux
+# git clone --depth=1 https://github.com/xanmod/linux.git -b 5.16
+# cd linux
 # cp msm-4.4/arch/arm64/configs/sdm660-perf_defconfig linux/arch/arm64/configs/sdm660_defconfig
 # git reset --hard
 # git cherry-pick
@@ -39,8 +48,6 @@ cd linux
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
 # bash kernel.sh
-clear
-cp CONFIGS/xanmod/gcc/config .config
-tg_post_msg "<code>Starting Build Kernel Linux..</code>"
-make -j$(nproc --all) 0=out && make modules_install -j$(nproc --all) 0=out 2>&1 | tee error.log
-tg_post_build "error.log" "*Build failed to compile*"
+# cp CONFIGS/xanmod/gcc/config .config
+tg_post_msg "<code>Thank for using...</code>"
+# make -j$(nproc --all) 0=out && make modules_install -j$(nproc --all) 0=out 2>&1 | tee error.log
