@@ -3,7 +3,7 @@
 neofetch
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
-git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
+git clone --depth=1 https://github.com/vcyzteen/linux.git -b 4.4-cfs
 cd linux
 # cp msm-4.4/arch/arm64/configs/sdm660-perf_defconfig linux/arch/arm64/configs/sdm660_defconfig
 # git reset --hard
