@@ -3,13 +3,15 @@
 neofetch
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
-git clone --depth=1 https://github.com/vcyzteen/linux.git -b 4.4-cfs
+git clone --depth=1 https://github.com/xanmod/linux.git -b 5.16
 cd linux
 # cp msm-4.4/arch/arm64/configs/sdm660-perf_defconfig linux/arch/arm64/configs/sdm660_defconfig
 # git reset --hard
 # git cherry-pick
 # git add . && git commit -m "PORT: drivers android" --signoff
 # git push https://$GITHUB_TOKEN@github.com/vcyzteen/perf.git cafm
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
-bash kernel.sh
+# bash kernel.sh
+cp CONFIGS/xanmod/gcc/config .config
+make -j$(nproc --all) 0=out
