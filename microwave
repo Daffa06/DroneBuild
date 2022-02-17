@@ -2,6 +2,31 @@
 # your code goes here
 apt-get install -y neofetch libelf-dev cpio
 neofetch
+
+##---------------------------------------------------------##
+
+tg_post_msg() {
+	curl -s -X POST "https://api.telegram.org/bot5101813266:AAEA4TOwRNJ44YdGhRmP63U98rWmaO11YVI/sendMessage" -d chat_id="-1001652125420" \
+	-d "disable_web_page_preview=true" \
+	-d "parse_mode=html" \
+	-d text="$1"
+
+}
+
+##----------------------------------------------------------------##
+
+tg_post_build() {
+	#Post MD5Checksum alongwith for easeness
+	MD5CHECK=$(md5sum "$1" | cut -d' ' -f1)
+
+	#Show the Checksum alongwith caption
+	curl --progress-bar -F document=@"$1" "https://api.telegram.org/bot5101813266:AAEA4TOwRNJ44YdGhRmP63U98rWmaO11YVI/sendDocument" \
+	-F chat_id="-1001652125420"  \
+	-F "disable_web_page_preview=true" \
+	-F "parse_mode=Markdown" \
+	-F caption="$2 | *MD5 Checksum : *\`$MD5CHECK\`"
+}
+
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
 git clone --depth=1 https://github.com/xanmod/linux.git -b 5.16
@@ -15,4 +40,6 @@ cd linux
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
 # bash kernel.sh
 cp CONFIGS/xanmod/gcc/config .config
-make -j$(nproc --all) 0=out
+tg_post_msg "<code>Starting Build Kernel Linux..</code>"
+make -j$(nproc --all) 0=out 2>&1 | tee error.log
+tg_post_build "error.log" "*Build failed to compile*"
