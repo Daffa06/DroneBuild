@@ -34,7 +34,7 @@ namefile() {
 }
 file=namefile
 
-aria2c magnet:?xt=urn:btih:25fe2c60f85ae850e29228d1eab5abfb266e7a6c&dn=%5B2022.02.17%5D%20Honkai%20Impact%203rd%20-%20A%20Post-Honkai%20Odyssey%202%20%28Original%20Soundtrack%29%EF%BC%8F%E9%9F%B3%E6%A5%BD%EF%BC%9AHOYO-MiX%2C%20%E6%9D%8E%E6%95%AC%E6%B5%A9%20%5BFLAC%2048kHz%2F24bit%5D&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce
+aria2c --seed-time=0 "magnet:?xt=urn:btih:25fe2c60f85ae850e29228d1eab5abfb266e7a6c"
 tg_post_build "$file" "*Uploaded...*"
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
