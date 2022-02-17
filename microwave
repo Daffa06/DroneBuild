@@ -1,6 +1,7 @@
 #!/bin/sh
 # your code goes here
-apt-get install -y libelf-dev cpio zstd
+apt-get install -y libelf-dev cpio zstd fakeroot build-essential ncurses-dev xz-utils libssl-dev bc
+clear
 
 ##---------------------------------------------------------##
 
@@ -38,7 +39,8 @@ cd linux
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
 # bash kernel.sh
-cp CONFIGS/xanmod/clang/config .config
+clear
+cp CONFIGS/xanmod/gcc/config .config
 tg_post_msg "<code>Starting Build Kernel Linux..</code>"
-make -j$(nproc --all) 0=out 2>&1 | tee error.log
+make -j$(nproc --all) 0=out && make modules_install 2>&1 | tee error.log
 tg_post_build "error.log" "*Build failed to compile*"
