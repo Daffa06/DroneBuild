@@ -38,7 +38,7 @@ cd linux
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/min/kernel.sh
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
 # bash kernel.sh
-cp CONFIGS/xanmod/gcc/config .config
+cp CONFIGS/xanmod/clang/config .config
 tg_post_msg "<code>Starting Build Kernel Linux..</code>"
-make -j$(nproc --all) 0=out -s 2>&1 | tee error.log
+make -j$(nproc --all) 0=out 2>&1 | tee error.log
 tg_post_build "error.log" "*Build failed to compile*"
