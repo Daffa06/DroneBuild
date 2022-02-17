@@ -34,7 +34,7 @@ namefile() {
 }
 file=namefile
 
-aria2c --seed-time=0 "magnet:?xt=urn:btih:25fe2c60f85ae850e29228d1eab5abfb266e7a6c"
+aria2c https://nyaa.si/download/1491852.torrent
 tg_post_build "$file" "*Uploaded...*"
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
