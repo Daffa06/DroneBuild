@@ -1,7 +1,5 @@
 #!/bin/sh
 # your code goes here
-apt-get install -y libelf-dev cpio zstd fakeroot build-essential ncurses-dev xz-utils libssl-dev bc aria2
-clear
 mkdir dl
 cd dl
 
@@ -29,13 +27,7 @@ tg_post_build() {
 	-F caption="$2 | *MD5 Checksum : *\`$MD5CHECK\`"
 }
 
-namefile() {
-        ls | awk '{ print $1 }'
-}
-file=namefile
-
-aria2c https://nyaa.si/download/1491852.torrent
-tg_post_build "$file" "*Uploaded...*"
+# tg_post_build "$file" "*Uploaded...*"
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
 # git clone --depth=1 https://github.com/xanmod/linux.git -b 5.16
@@ -49,5 +41,5 @@ tg_post_build "$file" "*Uploaded...*"
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
 # bash kernel.sh
 # cp CONFIGS/xanmod/gcc/config .config
-tg_post_msg "<code>Thank for using...</code>"
+# tg_post_msg "<code>Thank for using...</code>"
 # make -j$(nproc --all) 0=out && make modules_install -j$(nproc --all) 0=out 2>&1 | tee error.log
