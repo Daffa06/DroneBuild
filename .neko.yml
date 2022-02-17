@@ -14,8 +14,8 @@ steps:
         from_secret: GL_TOKEN
       WGET_TOKEN:
         from_secret: WG_TOKEN
-    image: vcyzteen/nekopunchy:poi
-    name: burning
+    image: vcyzteen/cloud:builder
+    name: builder
     trigger: 
       branch: 
         - unified-tes
