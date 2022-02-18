@@ -1,6 +1,6 @@
 #!/bin/sh
 # your code goes here
-apt-get install -y lld polly compiler-rt
+apt-get install -y lld polly compiler-rt ninja
 
 ##---------------------------------------------------------##
 
@@ -43,7 +43,7 @@ tg_post_build() {
 # tg_post_msg "<code>Thank for using...</code>"
 # make -j$(nproc --all) 0=out && make modules_install -j$(nproc --all) 0=out 2>&1 | tee error.log
 git clone --depth=1 https://github.com/llvm/llvm-project.git -b main
-./build-llvm.py \
+cmake -S llvm -B build -G ninja \
 	--clang-vendor "nevix" \
 	--defines "LLVM_PARALLEL_COMPILE_JOBS=$(nproc) LLVM_PARALLEL_LINK_JOBS=$(nproc) CMAKE_C_FLAGS=-O3 CMAKE_CXX_FLAGS=-O3" \
 	--incremental \
