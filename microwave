@@ -43,6 +43,7 @@ tg_post_build() {
 # tg_post_msg "<code>Thank for using...</code>"
 # make -j$(nproc --all) 0=out && make modules_install -j$(nproc --all) 0=out 2>&1 | tee error.log
 git clone --depth=1 https://github.com/llvm/llvm-project.git -b main
+cd llvm-project
 cmake -S llvm -B build -G Ninja \
 	-DLLVM_PARALLEL_COMPILE_JOBS=$(nproc --all) \
         -DLLVM_PARALLEL_LINK_JOBS=$(nproc --all) \
