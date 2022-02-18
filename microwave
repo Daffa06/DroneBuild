@@ -32,30 +32,24 @@ git clone https://github.com/vcyzteen/gcc-build.git && cd gcc-build
 git config --global user.name "vcyzteen"
 git config --global user.email "vcyzteen@protonmail.com"
 # upload
-git clone https://github.com/vcyzteen/gcc-arm64.git ../gcc-arm64 -b neko-v3
-rm -rf ../gcc-arm64/*
+git clone https://github.com/vcyzteen/gcc-arm.git ../gcc-arm -b neko-v3
+rm -rf ../gcc-arm/*
 chmod a+x build-*.sh
-./build-gcc.sh -a arm64
+./build-gcc.sh -a arm
 script_dir=$(pwd)
-cd ../gcc-arm64
-./bin/arm64-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
+cd ../gcc-arm
+./bin/arm-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm-version
 log1() {
-    cat /tmp/gcc-arm64-version | awk '{ print $1 }'
+    cat /tmp/gcc-arm-version | awk '{ print $1 }'
 }
-parser1=log1
+lo1=parser1
 tg_post_msg "<code>$parser1</code>"
-./bin/arm64-linux-gnueabi-ld.lld -v 2>&1 | tee /tmp/lld-arm64-version
-log2() {
-    cat /tmp/lld-arm64-version | awk '{ print $1 }'
-}
-parser2=log2
-tg_post_msg "<code>$parser2</code>"
 git add . -f
-git commit -as -m "Build Arm64 Gcc Nevixtoolchain" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" -m "LLD: $(/bin/cat /tmp/lld-arm64-version)"
+git commit -as -m "Build Arm Gcc Nevixtoolchain" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)"
 git gc
 git checkout -b stable
 tg_post_msg "<code>Start uploading...</code>"
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64 stable
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm stable
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
 # git clone --depth=1 https://github.com/xanmod/linux.git -b 5.16
@@ -69,3 +63,4 @@ git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64 stable
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
 # bash kernel.sh
 # cp CONFIGS/xanmod/gcc/config .config
+tg_post_msg "<code>Succes...</code>"
