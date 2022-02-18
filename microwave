@@ -52,4 +52,5 @@ cmake -S llvm -B build -G Ninja \
 	-DLLVM_ENABLE_LTO="-flto=Thin" \
 	-DLLVM_ENABLE_PROJECTS=clang \
 	-DLLVM_TARGETS_TO_BUILD=ARM
+cmake --build build -j$(nproc --all)
 ls /drone/src/llvm-project/build
