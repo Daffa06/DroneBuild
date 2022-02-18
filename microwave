@@ -37,9 +37,9 @@ git config --global user.email "vcyzteen@protonmail.com"
 git clone https://github.com/vcyzteen/gcc-arm64.git ../gcc-arm64 -b neko-v3
 rm -rf ../gcc-arm64/*
 chmod a+x build-*.sh
-./build-gcc.sh -a arm64
+./build-gcc.sh -a arm64 2>&1 | tee /tmp/build.log
 script_dir=$(pwd)
-cd ../gcc-arm64 2>&1 | tee /tmp/build.log
+cd ../gcc-arm64
 ./bin/arm64-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
 cat /tmp/gcc-arm64-version | awk '{ print $1 }' | tg_post_msg "<code>$1</code>"
 ./bin/arm64-linux-gnueabi-ld.lld -v 2>&1 | tee /tmp/lld-arm64-version
