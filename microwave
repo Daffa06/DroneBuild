@@ -1,33 +1,4 @@
 #!/bin/sh
-# your code goes here
-apt-get install -y lld llvm ninja-build aptitude flex bison ncurses-dev texinfo gcc gperf patch libtool automake g++ libncurses5-dev gawk subversion expat libexpat1-dev python-all-dev binutils-dev bc libcap-dev autoconf libgmp-dev build-essential pkg-config libmpc-dev libmpfr-dev autopoint gettext txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar gcc-10 g++-10 cmake zstd ninja-build lz4 liblz4-tool liblz4-dev lzma --fix-broken --fix-missing
-add-apt-repository ppa:ubuntu-toolchain-r/test -y
-# clone
-tg_post_msg "<code>Start build...</code>"
-git clone https://github.com/vcyzteen/gcc-build.git
-# date
-timedatectl set-timezone Asia/Kolkata
-echo ::set-output name=date::$(/bin/date -u "+%Y%m%d")
-# git
-git config --global user.name "vcyzteen"
-git config --global user.email "vcyzteen@protonmail.com"
-# upload
-tg_post_msg "<code>Start uploading...</code>"
-git clone https://github.com/vcyzteen/gcc-arm.git ../gcc-arm -b neko-v3
-rm -rf ../gcc-arm/*
-chmod a+x build-*.sh
-./build-gcc.sh -a arm
-script_dir=$(pwd)
-cd ../gcc-arm
-./bin/arm-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm-version
-tg_post_build "/tmp/gcc-arm-version" "*gcc arm32 version check...*"
-./bin/arm-linux-gnueabi-ld.lld -v 2>&1 | tee /tmp/lld-arm-version
-tg_post_build "/tmp/lld-arm-version" "*lld arm32 version check...*"
-git add . -f
-git commit -as -m "Build Arm Gcc ${{ steps.get-date.outputs.date }}" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" -m "LLD: $(/bin/cat /tmp/lld-arm-version)"
-git gc
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm stable
-
 ##---------------------------------------------------------##
 
 tg_post_msg() {
@@ -51,6 +22,33 @@ tg_post_build() {
 	-F "parse_mode=Markdown" \
 	-F caption="$2 | *MD5 Checksum : *\`$MD5CHECK\`"
 }
+# your code goes here
+apt-get install -y lld llvm ninja-build aptitude flex bison ncurses-dev texinfo gcc gperf patch libtool automake g++ libncurses5-dev gawk subversion expat libexpat1-dev python-all-dev binutils-dev bc libcap-dev autoconf libgmp-dev build-essential pkg-config libmpc-dev libmpfr-dev autopoint gettext txt2man liblzma-dev libssl-dev libz-dev mercurial wget tar gcc-10 g++-10 cmake zstd ninja-build lz4 liblz4-tool liblz4-dev lzma --fix-broken --fix-missing
+add-apt-repository ppa:ubuntu-toolchain-r/test -y
+# clone
+tg_post_msg "<code>Start build...</code>"
+git clone https://github.com/vcyzteen/gcc-build.git && cd gcc-build
+# date
+echo ::set-output name=date::$(/bin/date -u "+%Y%m%d")
+# git
+git config --global user.name "vcyzteen"
+git config --global user.email "vcyzteen@protonmail.com"
+# upload
+tg_post_msg "<code>Start uploading...</code>"
+git clone https://github.com/vcyzteen/gcc-arm.git ../gcc-arm -b neko-v3
+rm -rf ../gcc-arm/*
+chmod a+x build-*.sh
+./build-gcc.sh -a arm
+script_dir=$(pwd)
+cd ../gcc-arm
+./bin/arm-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm-version
+tg_post_build "/tmp/gcc-arm-version" "*gcc arm32 version check...*"
+./bin/arm-linux-gnueabi-ld.lld -v 2>&1 | tee /tmp/lld-arm-version
+tg_post_build "/tmp/lld-arm-version" "*lld arm32 version check...*"
+git add . -f
+git commit -as -m "Build Arm Gcc ${{ steps.get-date.outputs.date }}" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm-version)" -m "LLD: $(/bin/cat /tmp/lld-arm-version)"
+git gc
+git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm stable
 
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
 # tar -xvf ZB601KL-17.2017.2008.432-kernel.tar.gz
