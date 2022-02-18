@@ -45,11 +45,11 @@ tg_post_build() {
 git clone --depth=1 https://github.com/llvm/llvm-project.git -b main
 cmake -S llvm -B build -G Ninja \
 	--clang-vendor "nevix" \
-	--defines "LLVM_PARALLEL_COMPILE_JOBS=$(nproc) LLVM_PARALLEL_LINK_JOBS=$(nproc) CMAKE_C_FLAGS=-O3 CMAKE_CXX_FLAGS=-O3" \
-	--incremental \
-	--lto thin \
-	--projects "clang;lld;polly;compiler-rt" \
-	--pgo kernel-defconfig \
-	--shallow-clone \
-        --no-ccache \
-	--targets "ARM;AArch64;X86" 2>&1 | tee build.log
+	-DLLVM_PARALLEL_COMPILE_JOBS=$(nproc --all) \
+        -DLLVM_PARALLEL_LINK_JOBS=$(nproc --all) \
+        -CMAKE_C_FLAGS=-O3 \
+        -CMAKE_CXX_FLAGS=-O3" \
+	-DLLVM_ENABLE_LTO=Thin \
+	-DLLVM_ENABLE_PROJECTS=clang;lld;polly;compiler-rt \
+        -LLVM_CCACHE_BUILD \
+	-DLLVM_TARGETS_TO_BUILD=ARM;AArch64;X86 2>&1 | tee build.log
