@@ -28,8 +28,6 @@ add-apt-repository ppa:ubuntu-toolchain-r/test -y
 # clone
 tg_post_msg "<code>Start build...</code>"
 git clone https://github.com/vcyzteen/gcc-build.git && cd gcc-build
-# date
-echo ::set-output name=date::$(/bin/date -u "+%Y%m%d")
 # git
 git config --global user.name "vcyzteen"
 git config --global user.email "vcyzteen@protonmail.com"
@@ -37,16 +35,25 @@ git config --global user.email "vcyzteen@protonmail.com"
 git clone https://github.com/vcyzteen/gcc-arm64.git ../gcc-arm64 -b neko-v3
 rm -rf ../gcc-arm64/*
 chmod a+x build-*.sh
-./build-gcc.sh -a arm64 2>&1 | tee /tmp/build.log
+./build-gcc.sh -a arm64
 script_dir=$(pwd)
 cd ../gcc-arm64
 ./bin/arm64-linux-gnueabi-gcc -v 2>&1 | tee /tmp/gcc-arm64-version
-cat /tmp/gcc-arm64-version | awk '{ print $1 }' | tg_post_msg "<code>$1</code>"
+log1() {
+    cat /tmp/gcc-arm64-version | awk '{ print $1 }'
+}
+parser1=log1
+tg_post_msg "<code>$parser1</code>"
 ./bin/arm64-linux-gnueabi-ld.lld -v 2>&1 | tee /tmp/lld-arm64-version
-cat /tmp/lld-arm64-version | awk '{ print $1 }' | tg_post_msg "<code>$1</code>"
+log2() {
+    cat /tmp/lld-arm64-version | awk '{ print $1 }'
+}
+parser2=log2
+tg_post_msg "<code>$parser2</code>"
 git add . -f
-git commit -as -m "Build Arm64 Gcc ${{ steps.get-date.outputs.date }}" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" -m "LLD: $(/bin/cat /tmp/lld-arm64-version)"
+git commit -as -m "Build Arm64 Gcc Nevixtoolchain" -m "Build completed on: $(/bin/date)" -m "Configuration: $(/bin/cat /tmp/gcc-arm64-version)" -m "LLD: $(/bin/cat /tmp/lld-arm64-version)"
 git gc
+git checkout -b stable
 tg_post_msg "<code>Start uploading...</code>"
 git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64 stable
 # wget https://dlcdnets.asus.com/pub/ASUS/ZenFone/ZB601KL/ZB601KL-17.2017.2008.432-kernel.tar.gz
@@ -62,4 +69,3 @@ git push https://$GITHUB_TOKEN@github.com/vcyzteen/gcc-arm64 stable
 # sed -i -e 's/vcyzteen_defconfig/sdm660_defconfig/g' kernel.sh
 # bash kernel.sh
 # cp CONFIGS/xanmod/gcc/config .config
-tg_post_build "/tmp/build.log" "*this is the build log*"
