@@ -1,6 +1,6 @@
 #!/bin/sh
 # your code goes here
-apt-get install -y lld polly compiler-rt ninja
+apt-get install -y lld llvm-toolchain-14 ninja-build
 
 ##---------------------------------------------------------##
 
