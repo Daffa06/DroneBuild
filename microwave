@@ -10,4 +10,4 @@ rm -rf .git
 git init
 git add . && git commit -m "upload" --signoff
 git branch -M master
-git push --set-upstream https://$GITHUB_TOKEN@github.com/vcyzteen/simple-gcc-build.git
+git push --set-upstream https://$GITHUB_TOKEN@github.com/vcyzteen/simple-gcc-build.git master
