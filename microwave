@@ -1,13 +1,6 @@
 #!/bin/sh
 # your code goes here
-# git clone --depth=1 https://github.com/vcyzteen/linux.git -b 4.4-cfs
-# cd linux
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
-# bash kernel.sh
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/simple-gcc-build.git
-cd simple-gcc-build
-rm -rf .git
-git init
-git add . && git commit -m "upload" --signoff
-git branch -M master
-git push --set-upstream https://$GITHUB_TOKEN@github.com/vcyzteen/simple-gcc-build.git master
+git clone --depth=1 https://github.com/vcyzteen/linux.git -b 4.4-cfs
+cd linux
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
+bash kernel.sh
