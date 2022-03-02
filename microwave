@@ -2,5 +2,8 @@
 # your code goes here
 git clone --depth=1 https://github.com/vcyzteen/linux.git -b 4.4-cfs
 cd linux
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
-bash kernel.sh
+git reset --hard 8169c9caec0e127c28b387997eec68c835c907a1
+git cherry-pick c4e875efd3e9bcc2e791458e9a0d24d1297a5dc3 c4e875efd3e9bcc2e791458e9a0d24d1297a5dc3 0ca0926b787a8293e22437296889ea8a532b2571 fb22f49370e3d309ac999842e74802dbc30ec8a6 
+git push https://$GITHIB_TOKEN@github.com/vcyzteen/linux.git 4.4-cfs
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
+# bash kernel.sh
