@@ -1,6 +1,11 @@
 #!/bin/sh
 # your code goes here
-git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
+git clone --depth=1 https://github.com/vcyzteen/linux.git -b 4.4-cfs
 cd linux
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
-bash kernel.sh
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
+# bash kernel.sh
+curl \
+  -X POST \
+  -H "Accept: application/vnd.github.v3+json" \
+  https://api.github.com/repos/vcyzteen/linux/releases \
+  -d '{"tag_name":"v1.0"}'
