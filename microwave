@@ -1,6 +1,8 @@
 #!/bin/sh
 # your code goes here
-git clone https://github.com/vcyzteen/linux.git -b 4.4-cfs
-cd linux
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
-bash kernel.sh
+git clone https://source.codeaurora.org/quic/la/kernel/msm-4.19 -b v4.19.235 
+cd msm-4.19
+git checkout -b nevix
+git push --set-upstream https://$GITHUB_TOKEN@github.com/vcyzteen/rengasdengklok.git nevix
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
+# bash kernel.sh
