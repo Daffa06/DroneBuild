@@ -1,6 +1,6 @@
 #!/bin/sh
 # your code goes here
-git clone https://github.com/GZR-Kernels/Optimus_Drunk_Alioth -b 11.0 -b kernel.lnx.4.19.r3 
+git clone https://github.com/GZR-Kernels/Optimus_Drunk_Alioth -b 11.0
 cd Optimus_Drunk_Alioth
 wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc/kernel.sh
 bash kernel.sh
