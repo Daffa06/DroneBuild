@@ -1,8 +1,6 @@
 #!/bin/sh
 # your code goes here
-git clone https://source.codeaurora.org/quic/la/kernel/msm-4.19 -b kernel.lnx.4.19.r3 
-cd msm-4.19
-git checkout -b qssi-13
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/rengasdengklok.git qssi-13
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc-12/kernel.sh
-# bash kernel.sh
+git clone https://github.com/GZR-Kernels/Optimus_Drunk_Alioth -b 11.0 -b kernel.lnx.4.19.r3 
+cd Optimus_Drunk_Alioth
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc/kernel.sh
+bash kernel.sh
