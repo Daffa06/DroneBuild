@@ -1,7 +1,6 @@
 #!/bin/sh
 # your code goes here
-git clone https://github.com/GZR-Kernels/Optimus_Drunk_Alioth -b 11.0
-cd Optimus_Drunk_Alioth
-rm -rf AnyKernel3
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc/kernel.sh
+git clone https://github.com/MiCode/Xiaomi_Kernel_OpenSource -b alioth-r-oss
+cd Xiaomi_Kernel_OpenSource
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/kona/kernel.sh
 bash kernel.sh
