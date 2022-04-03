@@ -11,4 +11,4 @@ cd clang
 git init
 git add . && git commit -m "upload clang 14.0.4" --signoff
 git branch -M master
-git push --set-upstream https://github.com/vcyzteen/clang-14.0.4 master
+git push --set-upstream https://$GITHUB_TOKEN@github.com/vcyzteen/clang-14.0.4 master
