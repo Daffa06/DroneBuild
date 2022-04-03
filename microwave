@@ -12,5 +12,5 @@ git init
 git add . && git commit -m "upload clang 14.0.4" --signoff
 git branch -M master
 git config --global http.version HTTP/1.1
-git push --set-upstream https://$GITLAB_TOKEN@gitlab.com/Calliope-K/clang-14.0.4.git master
+git push --set-upstream https://Calliope-K:$GITLAB_TOKEN@gitlab.com/Calliope-K/clang-14.0.4.git master
 git config --global http.version HTTP/2
