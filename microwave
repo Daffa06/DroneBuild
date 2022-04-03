@@ -1,7 +1,14 @@
 #!/bin/sh
 # your code goes here
-apt-get install -y python
-git clone https://github.com/MiCode/Xiaomi_Kernel_OpenSource -b alioth-r-oss
-cd Xiaomi_Kernel_OpenSource
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/kona/kernel.sh
-bash kernel.sh
+# git clone https://github.com/MiCode/Xiaomi_Kernel_OpenSource -b alioth-r-oss
+# cd Xiaomi_Kernel_OpenSource
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/kona/kernel.sh
+# bash kernel.sh
+mkdir clang
+git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b master
+mv linux-x86/clang-r450784b/* clang/
+cd clang
+git init
+git add . && git commit -m "upload clang 14.0.4" --signoff
+git branch -M master
+git push --set-upstream https://github.com/vcyzteen/clang-14.0.4 master
