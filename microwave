@@ -1,16 +1,16 @@
 #!/bin/sh
 # your code goes here
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250 -b op
-cd android_kernel_sm8250
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc/kernel.sh
-bash kernel.sh
-# mkdir clang
-# git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b master
-# mv linux-x86/clang-r450784b/* clang/
-# cd clang
-# git init
-# git add . && git commit -m "upload clang 14.0.4" --signoff
-# git branch -M master
-# git config --global http.version HTTP/1.1
-# git push --set-upstream https://$GITHUB_TOKEN@github.com/vcyzteen/clang-14.0.4 master
-# git config --global http.version HTTP/2
+# git clone https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250 -b op
+# cd android_kernel_sm8250
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc/kernel.sh
+# bash kernel.sh
+mkdir clang
+git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b master
+mv linux-x86/clang-r450784b/* clang/
+cd clang
+git init
+git add . && git commit -m "upload clang 14.0.4" --signoff
+git branch -M master
+git config --global http.version HTTP/1.1
+git push --set-upstream https://$GITLAB_TOKEN@gitlab.com/Calliope-K/clang-14.0.4.git master
+git config --global http.version HTTP/2
