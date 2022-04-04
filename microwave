@@ -1,22 +1,6 @@
 #!/bin/sh
 # your code goes here
-git clone https://github.com/vcyzteen/result-linux-kernel
-cd result-linux-kernel
-mkdir -p sm8250
-mkdir -p sm8250/xiaomi
-mkdir -p sm8250/xiaomi/ALIOTH
-mv sdm660/asus/X00T/CreamCheese-POCOF3* sm8250/xiaomi/ALIOTH
-git add . && git commit -m "added folder sm8250 [ POCO F3 ]" --signoff
-git push https://$GITHUB_TOKEN@github.com/vcyzteen/result-linux-kernel
-# git clone https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250 -b op --depth=1
-# cd android_kernel_sm8250
-# wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc/kernel.sh
-# bash kernel.sh
-# mkdir clang
-# git clone https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86 -b master
-# mv linux-x86/clang-r450784b/* clang/
-# cd clang
-# git init
-# git add . && git commit -m "upload clang 14.0.4" --signoff
-# git branch -M master
-# git push --set-upstream https://Calliope-K:$GITLAB_TOKEN@gitlab.com/Calliope-K/clang-14.0.4.git master
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250 -b op --depth=1
+cd android_kernel_sm8250
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/clang/kernel.sh
+bash kernel.sh
