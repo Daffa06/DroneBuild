@@ -1,6 +1,6 @@
 #!/bin/sh
 # your code goes here
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250 -b op
+git clone https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250 -b op --depth=1
 cd android_kernel_sm8250
 wget https://raw.githubusercontent.com/vcyzteen/myscripts/gcc/kernel.sh
 bash kernel.sh
