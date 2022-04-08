@@ -14,6 +14,8 @@ steps:
         from_secret: GL_TOKEN
       WGET_TOKEN:
         from_secret: WG_TOKEN
+      TOKEN: 
+        from_secret: TG_TOKEN
     image: vcyzteen/cloud:builder
     name: builder
     trigger: 
