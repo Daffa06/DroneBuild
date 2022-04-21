@@ -1,6 +1,8 @@
 #!/bin/sh
 # your code goes here
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250 -b op --depth=1
-cd android_kernel_sm8250
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/clang/kernel.sh
-bash kernel.sh
+# git clone https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250 -b op --depth=1
+# cd android_kernel_sm8250
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/clang/kernel.sh
+# bash kernel.sh
+apt-get install -y aria2
+aria2c https://nyaa.si/download/1517807.torrent
