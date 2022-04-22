@@ -4,4 +4,4 @@
 # cd android_kernel_sm8250
 # wget https://raw.githubusercontent.com/vcyzteen/myscripts/clang/kernel.sh
 # bash kernel.sh
-clang --version
+clang-14 --version
