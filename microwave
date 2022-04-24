@@ -1,6 +1,5 @@
 #!/bin/sh
 # your code goes here
-ufw disable
 git clone --depth=1 https://github.com/GZR-Kernels/Optimus_Drunk_Alioth.git -b 11.0
 cd Optimus_Drunk_Alioth
 export KBUILD_BUILD_USER=vcyzteen
