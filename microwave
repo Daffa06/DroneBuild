@@ -1,6 +1,6 @@
 #!/bin/sh
 # your code goes here
-git clone --depth=1 https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250.git -b chesse
+git clone --depth=1 https://$GITHUB_TOKENgithub.com/vcyzteen/android_kernel_sm8250.git -b chesse
 cd android_kernel_sm8250
 export KBUILD_BUILD_USER=vcyzteen
 export KBUILD_BUILD_HOST=voidlinux
