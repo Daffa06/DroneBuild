@@ -1,11 +1,11 @@
 #!/bin/sh
 # your code goes here
 ufw disable
-git clone --depth=1 https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250.git -b chesse
-cd android_kernel_sm8250
+git clone --depth=1 https://github.com/GZR-Kernels/Optimus_Drunk_Alioth.git -b 11.0
+cd Optimus_Drunk_Alioth
 export KBUILD_BUILD_USER=vcyzteen
 export KBUILD_BUILD_HOST=voidlinux
-make -j$(nproc) O=out ARCH=arm64 vendor/syberia_defconfig
+make -j$(nproc) O=out ARCH=arm64 vendor/alioth_defconfig
 make -j$(nproc) ARCH=arm64 O=out \
                 CROSS_COMPILE=aarch64-linux-gnu- \
                 CROSS_COMPILE_ARM32=arm-linux-gnueabi- \
