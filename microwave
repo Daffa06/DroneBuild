@@ -1,5 +1,5 @@
 #!/bin/sh
 # your code goes here
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/creamcheese
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/clang/kernel.sh
-bash kernel.sh
+git clone https://github.com/vcyzteen/picom.git
+# wget https://raw.githubusercontent.com/vcyzteen/myscripts/clang/kernel.sh
+# bash kernel.sh
