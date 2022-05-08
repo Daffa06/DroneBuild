@@ -1,5 +1,5 @@
 #!/bin/sh
 # your code goes here
 git clone --depth=1 https://$GITHUB_TOKEN@github.com/vcyzteen/android_kernel_sm8250.git -b chesse
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/kona/kernel.sh
+wget https://raw.githubusercontent.com/vcyzteen/myscripts/clang/kernel.sh
 bash kernel.sh
