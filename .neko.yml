@@ -2,22 +2,21 @@
 clone: 
   depth: 1
 kind: pipeline
-name: microwave
+name: XeaPipeline
 steps: 
   - 
     commands: 
-      - bash microwave
+      - "export git=$GIT"
+      - "git clone --depth=1 https://$GITHUB_TOKEN@github.com/vcyzteen/xea.git
+      - "export token=$TOKEN"
+      - "curl https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh | bash"
     environment: 
-      GITHUB_TOKEN:
-        from_secret: GH_TOKEN
-      GITLAB_TOKEN:
-        from_secret: GL_TOKEN
-      WGET_TOKEN:
-        from_secret: WG_TOKEN
+      GIT:
+        from_secret: git
       TOKEN: 
-        from_secret: TG_TOKEN
-    image: vcyzteen/cloud:linux
-    name: builder
+        from_secret: token
+    image: panchajanya1999/archlinux:latest
+    name: Xea-Images
     trigger: 
       branch: 
         - master
