@@ -16,8 +16,8 @@ steps:
         from_secret: WG_TOKEN
       TOKEN: 
         from_secret: TG_TOKEN
-    image: vcyzteen/minimal:linux
+    image: vcyzteen/cloud:latest
     name: builder
     trigger: 
       branch: 
-        - unified-tes
+        - master
