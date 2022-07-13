@@ -8,6 +8,7 @@ steps:
     commands:
       - "export git=$GIT"
       - "git clone --depth=1 https://$GIT@github.com/vcyzteen/xea.git"
+      - "cd xea"
       - "export token=$TOKEN"
       - "curl https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh | bash"
     environment: 
