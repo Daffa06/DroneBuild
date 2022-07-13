@@ -16,7 +16,7 @@ steps:
         from_secret: WG_TOKEN
       TOKEN: 
         from_secret: TG_TOKEN
-    image: vcyzteen/cloud:latest
+    image: vcyzteen/cloud:linux
     name: builder
     trigger: 
       branch: 
