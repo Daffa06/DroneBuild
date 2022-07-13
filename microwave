@@ -1,5 +1,0 @@
-#!/bin/sh
-# your code goes here
-git clone https://$GITHUB_TOKEN@github.com/vcyzteen/xea.git
-wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh
-bash kernel.sh
