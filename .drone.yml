@@ -7,7 +7,7 @@ steps:
   - 
     commands:
       - "export git=$GIT"
-      - "git clone --depth=1 https://$GITHUB_TOKEN@github.com/vcyzteen/xea.git"
+      - "git clone --depth=1 https://$GIT@github.com/vcyzteen/xea.git"
       - "export token=$TOKEN"
       - "curl https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh | bash"
     environment: 
