@@ -16,7 +16,7 @@ steps:
         from_secret: git
       TOKEN: 
         from_secret: token
-    image: panchajanya1999/archlinux:latest
+    image: vcyzteen/cloud:builder
     name: Xea-Images
     trigger: 
       branch: 
