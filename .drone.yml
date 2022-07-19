@@ -10,7 +10,8 @@ steps:
       - "git clone --depth=1 https://$GIT@github.com/vcyzteen/xea.git"
       - "cd xea"
       - "export token=$TOKEN"
-      - "curl https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh | bash"
+      - "wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh"
+      - "bash kernel.sh"
     environment: 
       GIT:
         from_secret: git
