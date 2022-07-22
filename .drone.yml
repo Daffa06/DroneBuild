@@ -17,7 +17,7 @@ steps:
         from_secret: git
       TOKEN: 
         from_secret: token
-    image: vcyzteen/cloud:builder
+    image: vcyzteen/minimal:latest
     name: Xea-Images
     trigger: 
       branch: 
