@@ -11,7 +11,6 @@ steps:
       - cd linux
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
-      - make clean 0=out
       - grep -q 'Rules-Requires-Root: no' scripts/package/mkdebian || grep -q fakeroot scripts/Makefile.package scripts/package/Makefile || echo fakeroot
       - make -j24 0=out
       - make -j24 0=out bindeb-pkg
