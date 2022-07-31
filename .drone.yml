@@ -7,16 +7,10 @@ steps:
   - 
     commands:
       - apt-get -y install rsync kmod
-      - git clone https://github.com/xanmod/linux.git --depth=1
-      - cd linux
-      - export ARCH=x86
-      - mkdir -p out
-      - make O=out clean
-      - make O=out mrproper
-      - cp CONFIGS/xanmod/gcc/config_x86-64 out/.config
-      - make O=out oldconfig
-      - make -j24 O=out bindeb-pkg
-      - ls debian
+      - git clone https://github.com/vcyzteen/xea-linux-x86 --depth=1
+      - cd xea-linux-x86
+      - wget https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/build.sh
+      - bash build.sh
     environment: 
       GIT:
         from_secret: git
