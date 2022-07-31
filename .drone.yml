@@ -6,14 +6,14 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - apt-get -y install rsync
+      - apt-get -y install rsync kmod
       - git clone https://github.com/xanmod/linux.git --depth=1
       - cd linux
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
       - make clean 0=out
-      - make -j24 0=out
       - make -j24 0=out bindeb-pkg
+      - make -j24 0=out
       - find /out -name *.deb
     environment: 
       GIT:
