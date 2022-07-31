@@ -11,10 +11,13 @@ steps:
       - cd linux
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
+      - mkdir -p out
       - make clean 0=out
       - make -j24 0=out bindeb-pkg
-      - make -j24 0=out
-      - find . -name *.deb
+      - ls out
+      - ls ../
+      - find out -name *.deb
+      - find ../ -name *.deb
     environment: 
       GIT:
         from_secret: git
