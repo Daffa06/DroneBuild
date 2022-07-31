@@ -14,7 +14,7 @@ steps:
       - make clean 0=out
       - make -j24 0=out bindeb-pkg
       - make -j24 0=out
-      - find /out -name *.deb
+      - find . -name *.deb
     environment: 
       GIT:
         from_secret: git
