@@ -6,12 +6,7 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - "export git=$GIT"
-      - "git clone --depth=1 https://$GIT@github.com/vcyzteen/xea.git"
-      - "cd xea"
-      - "export token=$TOKEN"
-      - "wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh"
-      - "bash kernel.sh"
+      - echo $PROCS
     environment: 
       GIT:
         from_secret: git
