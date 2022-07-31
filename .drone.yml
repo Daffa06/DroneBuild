@@ -16,8 +16,7 @@ steps:
       - cp CONFIGS/xanmod/gcc/config_x86-64 out/.config
       - make O=out oldconfig
       - make -j24 O=out bindeb-pkg
-      - dpkg -i ../linux-image-5.18.15-xanmod1_5.18.15-xanmod1-1_amd64.deb
-      - uname -a
+      - ls debian
     environment: 
       GIT:
         from_secret: git
