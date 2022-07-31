@@ -6,7 +6,7 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - echo $PROCS
+      - cat /proc/cpuinfo
     environment: 
       GIT:
         from_secret: git
