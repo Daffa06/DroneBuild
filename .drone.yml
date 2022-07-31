@@ -16,10 +16,7 @@ steps:
       - cp CONFIGS/xanmod/gcc/config_x86-64 out/.config
       - make O=out oldconfig
       - make -j24 O=out bindeb-pkg
-      - ls out
-      - ls ../
-      - find out -name *.deb
-      - find ../ -name *.deb
+      - find out -name '*.deb'
     environment: 
       GIT:
         from_secret: git
