@@ -6,7 +6,11 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - cat /proc/cpuinfo
+      - git clone https://github.com/xanmod/linux.git --depth=1
+      - cd linux
+      - cp CONFIGS/xanmod/gcc/config_x86-64 .config
+      - export ARCH=x86
+      - make -j24
     environment: 
       GIT:
         from_secret: git
