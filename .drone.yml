@@ -9,9 +9,12 @@ steps:
       - apt-get -y install rsync kmod
       - git clone https://github.com/xanmod/linux.git --depth=1
       - cd linux
-      - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
       - mkdir -p out
+      - make O=out clean
+      - make O=out mrproper
+      - cp CONFIGS/xanmod/gcc/config_x86-64 out/.config
+      - make O=out oldconfig
       - make -j24 O=out bindeb-pkg
       - ls out
       - ls ../
