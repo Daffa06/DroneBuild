@@ -10,7 +10,9 @@ steps:
       - cd linux
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
-      - make -j24
+      - make -j24 0=out
+      - make -j24 0=out intdeb-pkg
+      - find . -name *.deb
     environment: 
       GIT:
         from_secret: git
