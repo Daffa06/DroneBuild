@@ -9,8 +9,6 @@ steps:
       - apt-get -y install rsync kmod
       - git clone https://github.com/xanmod/linux.git --depth=1
       - cd linux
-      - make clean
-      - make mrproper
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
       - mkdir -p out
