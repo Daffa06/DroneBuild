@@ -6,16 +6,18 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - git clone https://github.com/xanmod/linux.git --depth=1
-      - cd linux
-      - cp CONFIGS/xanmod/gcc/config_x86-64 .config
-      - make ARCH=x86 KBUILD_BUILD_VERSION=initial
+      - "export git=$GIT"
+      - "git clone --depth=1 https://$GIT@github.com/vcyzteen/xea.git"
+      - "cd xea"
+      - "export token=$TOKEN"
+      - "wget https://raw.githubusercontent.com/vcyzteen/myscripts/master/kernel.sh"
+      - "bash kernel.sh"
     environment: 
       GIT:
         from_secret: git
       TOKEN: 
         from_secret: token
-    image: vcyzteen/minimal:latest
+    image: vcyzteen/xea:x
     name: Xea-Images
     trigger: 
       branch: 
