@@ -12,9 +12,9 @@ steps:
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
       - make clean 0=out
-      - make -f -j24 0=out
-      - make -f -j24 0=out modules_install
-      - make -f -j24 0=out bindeb-pkg
+      - make -j24 0=out
+      - make -j24 0=out modules_install
+      - make -j24 0=out bindeb-pkg
       - find /out -name *.deb
     environment: 
       GIT:
