@@ -16,7 +16,8 @@ steps:
       - cp CONFIGS/xanmod/gcc/config_x86-64 out/.config
       - make O=out oldconfig
       - make -j24 O=out bindeb-pkg
-      - find out -name '*.deb'
+      - cp ../linux-image-5.18.15-xanmod1_5.18.15-xanmod1-1_amd64.deb /drone/src
+      - ls /drone/src
     environment: 
       GIT:
         from_secret: git
