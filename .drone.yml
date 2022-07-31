@@ -12,7 +12,8 @@ steps:
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
       - mkdir -p out
-      - make clean O=out
+      - make clean
+      - make mrproper
       - make -j24 O=out bindeb-pkg
       - ls out
       - ls ../
