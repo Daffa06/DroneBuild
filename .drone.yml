@@ -6,14 +6,16 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - apt-get -y install kmod
+      - apt-get -y install linux-source kmod dwarves 
       - git clone https://github.com/xanmod/linux.git --depth=1
       - cd linux
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
       - export ARCH=x86
-      - make -j24 0=out
-      - make -j24 0=out modules_install
-      - make -j24 0=out intdeb-pkg
+      - make clean 0=out
+      - dpkg-buildpackage -r"fakeroot -u" -a$(cat debian/arch)  -b -nc -uc
+      - make -f -j24 0=out
+      - make -f -j24 0=out modules_install
+      - make -f -j24 0=out bindeb-pkg
       - find /out -name *.deb
     environment: 
       GIT:
