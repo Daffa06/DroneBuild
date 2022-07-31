@@ -6,7 +6,6 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - apt-get -y install rsync kmod
       - git clone https://github.com/vcyzteen/xea-linux-x86 --depth=1
       - cd xea-linux-x86
       - wget https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/build.sh
