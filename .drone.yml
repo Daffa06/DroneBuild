@@ -6,7 +6,7 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - apt-get -y install linux-source kmod dwarves 
+      - apt-get -y install linux-upstream rsync
       - git clone https://github.com/xanmod/linux.git --depth=1
       - cd linux
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
