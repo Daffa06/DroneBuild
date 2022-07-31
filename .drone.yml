@@ -6,7 +6,7 @@ name: XeaPipeline
 steps: 
   - 
     commands:
-      - sudo apt-get -y install kmod
+      - apt-get -y install kmod
       - git clone https://github.com/xanmod/linux.git --depth=1
       - cd linux
       - cp CONFIGS/xanmod/gcc/config_x86-64 .config
