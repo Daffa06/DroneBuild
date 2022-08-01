@@ -8,9 +8,17 @@ steps:
     commands:
       - "export git=$GIT"
       - "export token=$TOKEN"
-      - "git clone https://github.com/vcyzteen/xea-linux-x86 --depth=1"
-      - "cd xea-linux-x86"
-      - "curl -s https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/build.sh | bash"
+      - git clone https://github.com/vcyzteen/xea-linux-x86.git --depth=1
+      - cd xea-linux-x86
+      - export ARCH=x86
+      - mkdir -p out
+      - make O=out clean
+      - make O=out mrproper
+      - cp CONFIGS/gcc/xea_defconfig out/.config
+      - make O=out oldconfig
+      - make -j24 O=out bindeb-pkg
+      - cp out/../linux-image-5.18.15-xanmod1_5.18.15-xanmod1-1_amd64.deb /drone/src
+      - curl -v -F "chat_id=-1001721818658" -F document=@/drone/src/*.deb https://api.telegram.org/bot$token/sendDocument
     environment: 
       GIT:
         from_secret: git
