@@ -10,7 +10,7 @@ steps:
       - "export token=$TOKEN"
       - "git clone https://github.com/vcyzteen/xea-linux-x86 --depth=1"
       - "cd xea-linux-x86"
-      - "bash <(curl -s https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/build.sh)>"
+      - "curl -s https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/build.sh | bash"
     environment: 
       GIT:
         from_secret: git
