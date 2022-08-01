@@ -2,15 +2,15 @@
 clone: 
   depth: 1
 kind: pipeline
-name: XeaPipeline
+name: Daffapipeline
 steps: 
   - 
     commands:
       - "export git=$GIT"
       - "export token=$TOKEN"
-      - "git clone https://github.com/vcyzteen/xea-linux-x86 --depth=1"
-      - "cd xea-linux-x86"
-      - "curl -s https://raw.githubusercontent.com/vcyzteen/builder-kernel-x86/master/build.sh | bash"
+      - "git clone https://github.com/Daffa06/NoName-X00T.git --depth=1"
+      - "cd NoName-X00T"
+      - "curl -s https://raw.githubusercontent.com/Daffa06/myscripts-kernel/master/kernel.sh | bash"
     environment: 
       GIT:
         from_secret: git
