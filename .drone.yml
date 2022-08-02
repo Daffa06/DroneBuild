@@ -8,7 +8,7 @@ steps:
     commands:
       - "export git=$GIT"
       - "export token=$TOKEN"
-      - "sudo apt-get -y install glibc"
+      - "apt-get -y install glibc"
       - "git clone https://github.com/Daffa06/NoName-X00T.git --depth=1"
       - "cd NoName-X00T"
       - "curl -s https://raw.githubusercontent.com/Daffa06/myscripts-kernel/master/kernel.sh | bash"
