@@ -8,7 +8,7 @@ steps:
     commands:
       - "export git=$GIT"
       - "export token=$TOKEN"
-      - "git clone --depth=1 https://github.com/Daffa06/NoName-X00T.git -b"
+      - "git clone --depth=1 https://github.com/Daffa06/NoName-X00T.git -b NoName-12"
       - "cd NoName-X00T"
       - "curl -s https://raw.githubusercontent.com/Daffa06/myscripts-kernel/master/kernel.sh | bash"
     environment: 
