@@ -16,7 +16,7 @@
 #         from_secret: git
 #       TOKEN: 
 #         from_secret: token
-#     image: vcyzteen/xea:x
+#     image: xealea/xea:01
 #     name: Xea-Images
 #     trigger: 
 #       branch: 
@@ -39,7 +39,7 @@
 #         from_secret: git
 #       TOKEN: 
 #         from_secret: token
-#     image: vcyzteen/xea:x
+#     image: xealea/xea:01
 #     name: Xea-Images
 #     trigger: 
 #       branch: 
@@ -62,7 +62,7 @@
 #         from_secret: git
 #       TOKEN: 
 #         from_secret: token
-#     image: vcyzteen/xea:x
+#     image: xealea/xea:01
 #     name: Xea-Images
 #     trigger: 
 #       branch: 
@@ -85,7 +85,7 @@ steps:
         from_secret: git
       TOKEN: 
         from_secret: token
-    image: vcyzteen/xea:x
+    image: xealea/xea:01
     name: Xea-Images
     trigger: 
       branch: 
