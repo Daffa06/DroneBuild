@@ -21,30 +21,30 @@
 #     trigger: 
 #       branch: 
 #         - master
-# --- 
-# clone: 
-#   depth: 1
-# kind: pipeline
-# name: LV
-# steps: 
-#   - 
-#     commands:
-#       - "export git=$GIT"
-#       - "export token=$TOKEN"
-#       - "git clone --depth=1 https://github.com/Daffa06/NoName-X00T.git -b LV"
-#       - "cd NoName-X00T"
-#       - "curl -s https://raw.githubusercontent.com/Daffa06/myscripts-kernel/master/kernel.sh | bash"
-#     environment: 
-#       GIT:
-#         from_secret: git
-#       TOKEN: 
-#         from_secret: token
-#     image: xealea/xea:01
-#     name: Xea-Images
-#     trigger: 
-#       branch: 
-#         - master
-# --- 
+--- 
+clone: 
+  depth: 1
+kind: pipeline
+name: LV
+steps: 
+  - 
+    commands:
+      - "export git=$GIT"
+      - "export token=$TOKEN"
+      - "git clone --depth=1 https://github.com/Daffa06/NoName-X00T.git -b LV"
+      - "cd NoName-X00T"
+      - "curl -s https://raw.githubusercontent.com/Daffa06/myscripts-kernel/master/kernel.sh | bash"
+    environment: 
+      GIT:
+        from_secret: git
+      TOKEN: 
+        from_secret: token
+    image: xealea/xea:01
+    name: Xea-Images
+    trigger: 
+      branch: 
+        - master
+--- 
 clone: 
   depth: 1
 kind: pipeline
