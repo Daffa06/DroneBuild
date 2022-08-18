@@ -21,7 +21,7 @@
 #     trigger: 
 #       branch: 
 #         - master
---- 
+# --- 
 clone: 
   depth: 1
 kind: pipeline
@@ -44,7 +44,7 @@ steps:
     trigger: 
       branch: 
         - master
---- 
+# --- 
 clone: 
   depth: 1
 kind: pipeline
@@ -67,7 +67,7 @@ steps:
     trigger: 
       branch: 
         - master
---- 
+# --- 
 # clone: 
 #   depth: 1
 # kind: pipeline
