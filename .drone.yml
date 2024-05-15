@@ -11,7 +11,7 @@ labels:
    architecture: amd64
 
 node:
-   architecture: arm64
+   architecture: amd64
 
 steps: 
   - 
