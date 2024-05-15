@@ -16,7 +16,7 @@ steps:
         from_secret: git
       TOKEN: 
         from_secret: token
-    image: xealea/xea:01
+    image: xealea/xea:02
     name: Xea-Images
     trigger: 
       branch: 
@@ -39,7 +39,7 @@ steps:
         from_secret: git
       TOKEN: 
         from_secret: token
-    image: xealea/xea:01
+    image: xealea/xea:02
     name: Xea-Images
     trigger: 
       branch: 
