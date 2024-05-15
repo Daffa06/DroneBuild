@@ -3,6 +3,16 @@ clone:
   depth: 1
 kind: pipeline
 name: LV
+platform:
+   os: linux
+   arch: amd64
+
+labels:
+   architecture: amd64
+
+node:
+   architecture: arm64
+
 steps: 
   - 
     commands:
