@@ -1,16 +1,30 @@
+---
 kind: pipeline
 type: docker
 name: default
 
-steps:
-- name: backend
-  image: golang
-  commands:
-  - go build
-  - go test
+clone:
+  depth: 1
 
-- name: frontend
-  image: node
-  commands:
-  - npm install
-  - npm test
+steps:
+
+  - name: Xea-Images
+    image: vcyzteen/xea:x
+    commands:
+      - export git=$GIT
+      - export token=$TOKEN
+      - apt-get -y install glibc
+      - git clone https://github.com/Daffa06/NoName-X00T.git --depth=1
+      - cd NoName-X00T
+      - curl -s https://raw.githubusercontent.com/Daffa06/myscripts-kernel/master/kernel.sh | bash
+    environment:
+      GIT:
+        from_secret: git
+      TOKEN:
+        from_secret: token
+
+trigger:
+  branch:
+    - master
+
+---
