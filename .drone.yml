@@ -1,56 +1,16 @@
---- 
-clone: 
-  depth: 1
 kind: pipeline
-name: LV
-platform:
-   os: linux
-   arch: amd64
+type: docker
+name: default
 
-labels:
-   architecture: amd64
+steps:
+- name: backend
+  image: golang
+  commands:
+  - go build
+  - go test
 
-node:
-   architecture: amd64
-
-steps: 
-  - 
-    commands:
-      - "export git=$GIT"
-      - "export token=$TOKEN"
-      - "git clone --depth=1 https://github.com/Daffa06/NoName-X00T.git -b LV"
-      - "cd NoName-X00T"
-      - "curl -s https://raw.githubusercontent.com/Daffa06/myscripts-kernel/master/kernel.sh | bash"
-    environment: 
-      GIT:
-        from_secret: git
-      TOKEN: 
-        from_secret: token
-    image: xealea/xea:02
-    name: Xea-Images
-    trigger: 
-      branch: 
-        - master
---- 
-clone: 
-  depth: 1
-kind: pipeline
-name: NLV
-steps: 
-  - 
-    commands:
-      - "export git=$GIT"
-      - "export token=$TOKEN"
-      - "git clone --depth=1 https://github.com/Daffa06/NoName-X00T.git -b NLV"
-      - "cd NoName-X00T"
-      - "curl -s https://raw.githubusercontent.com/Daffa06/myscripts-kernel/master/kernel.sh | bash"
-    environment: 
-      GIT:
-        from_secret: git
-      TOKEN: 
-        from_secret: token
-    image: xealea/xea:02
-    name: Xea-Images
-    trigger: 
-      branch: 
-        - master
+- name: frontend
+  image: node
+  commands:
+  - npm install
+  - npm test
