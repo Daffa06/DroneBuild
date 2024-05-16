@@ -26,5 +26,3 @@ steps:
 trigger:
   branch:
     - master
-
----
